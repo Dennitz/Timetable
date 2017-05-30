@@ -1,0 +1,63 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "react-native",
+    "plugin:flowtype/recommended",
+    "airbnb"
+  ],
+  "plugins": [
+    "react",
+    "react-native",
+    "jsx-a11y",
+    "import",
+    "flowtype",
+    "babel"
+  ],
+  "rules": {
+    "react/require-default-props": 0,
+    "no-underscore-dangle": 0,
+    "react/no-unused-prop-types": 0,
+    "global-require": 0,
+    "import/no-named-as-default": 0,
+    "react-native/no-color-literals": 0,
+    "no-use-before-define": 0,
+    "semi": 0,
+    "babel/semi": "error",
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "render",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "flowtype/delimiter-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "flowtype/semi": [
+      2,
+      "never"
+    ]
+  }
+}

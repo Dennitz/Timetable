@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollapsibleField component renders correctly 1`] = `
+<View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={undefined}
+    testID={undefined}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "height": 48,
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={undefined}
+          editable={false}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          placeholder="header placeholer"
+          secureTextEntry={undefined}
+          style={
+            Array [
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "marginTop": 0,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+              },
+              Object {
+                "color": "rgb(117, 117, 117)",
+                "fontSize": 16,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+              },
+              Object {
+                "flex": 1,
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value="header"
+        />
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "height": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.12)",
+                "height": 1,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#247BA0",
+                "height": 1,
+                "left": 0,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    pointerEvents="none"
+    style={
+      Object {
+        "height": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={Object {}}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        only visible if not collapsed
+      </Text>
+    </View>
+  </View>
+</View>
+`;

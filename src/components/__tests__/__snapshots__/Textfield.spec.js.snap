@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textfield component renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 48,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={undefined}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      secureTextEntry={undefined}
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "transparent",
+            "marginTop": 0,
+            "paddingBottom": 2,
+            "paddingTop": 2,
+          },
+          Object {
+            "color": "rgb(117, 117, 117)",
+            "fontSize": 16,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="some value"
+    />
+    <View
+      pointerEvents="none"
+      style={
+        Object {
+          "height": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(0, 0, 0, 0.12)",
+            "height": 1,
+            "position": "absolute",
+            "width": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#247BA0",
+            "height": 1,
+            "left": 0,
+            "position": "absolute",
+            "width": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Textfield component renders error messages correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 48,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={undefined}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      secureTextEntry={undefined}
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "transparent",
+            "marginTop": 0,
+            "paddingBottom": 2,
+            "paddingTop": 2,
+          },
+          Object {
+            "color": "rgb(117, 117, 117)",
+            "fontSize": 16,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="some value"
+    />
+    <View
+      pointerEvents="none"
+      style={
+        Object {
+          "height": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": 1,
+            "position": "absolute",
+            "width": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#247BA0",
+            "height": 1,
+            "left": 0,
+            "position": "absolute",
+            "width": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    an error message
+  </Text>
+</View>
+`;

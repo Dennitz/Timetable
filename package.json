@@ -1,0 +1,65 @@
+{
+  "name": "Timetable",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
+    "ramda": "^0.24.0",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "react-native-elevated-view": "^0.0.4",
+    "react-native-i18n": "^1.0.0",
+    "react-native-keyboard-aware-scroll-view": "^0.2.9",
+    "react-native-material-kit": "^0.4.1",
+    "react-native-navigation": "latest",
+    "react-native-vector-icons": "^4.2.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-form": "^6.7.0",
+    "redux-persist": "^4.8.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "^1.9.2",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-react-native": "^1.6.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-react-native": "^2.3.2",
+    "flow-bin": "^0.42.0",
+    "jest": "^20.0.4",
+    "mockdate": "^2.0.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^15.5.4",
+    "redux-mock-store": "^1.2.3",
+    "remote-redux-devtools": "^0.5.11"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./config/jest/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ],
+    "resetMocks": true,
+    "resetModules": true
+  }
+}

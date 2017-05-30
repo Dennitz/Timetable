@@ -1,0 +1,561 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Course component renders correctly with optional props 1`] = `
+<View
+  leftActionActivationDistance={125}
+  leftActionReleaseAnimationConfig={null}
+  leftActionReleaseAnimationFn={null}
+  leftButtonWidth={75}
+  leftButtonsActivationDistance={75}
+  leftButtonsCloseReleaseAnimationConfig={null}
+  leftButtonsCloseReleaseAnimationFn={null}
+  leftButtonsOpenReleaseAnimationConfig={null}
+  leftButtonsOpenReleaseAnimationFn={null}
+  onLayout={[Function]}
+  onLeftActionActivate={[Function]}
+  onLeftActionComplete={[Function]}
+  onLeftActionDeactivate={[Function]}
+  onLeftActionRelease={[Function]}
+  onLeftButtonsActivate={[Function]}
+  onLeftButtonsCloseComplete={[Function]}
+  onLeftButtonsCloseRelease={[Function]}
+  onLeftButtonsDeactivate={[Function]}
+  onLeftButtonsOpenComplete={[Function]}
+  onLeftButtonsOpenRelease={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onPanAnimatedValueRef={[Function]}
+  onRef={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onRightActionActivate={[Function]}
+  onRightActionComplete={[Function]}
+  onRightActionDeactivate={[Function]}
+  onRightActionRelease={[Function]}
+  onRightButtonsActivate={[Function]}
+  onRightButtonsCloseComplete={[Function]}
+  onRightButtonsCloseRelease={[Function]}
+  onRightButtonsDeactivate={[Function]}
+  onRightButtonsOpenComplete={[Function]}
+  onRightButtonsOpenRelease={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeComplete={[Function]}
+  onSwipeMove={[Function]}
+  onSwipeRelease={[Function]}
+  onSwipeStart={[Function]}
+  rightActionActivationDistance={125}
+  rightActionReleaseAnimationConfig={null}
+  rightActionReleaseAnimationFn={null}
+  rightButtonWidth={75}
+  rightButtonsActivationDistance={75}
+  rightButtonsCloseReleaseAnimationConfig={null}
+  rightButtonsCloseReleaseAnimationFn={null}
+  rightButtonsOpenReleaseAnimationConfig={null}
+  rightButtonsOpenReleaseAnimationFn={null}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+  swipeReleaseAnimationConfig={
+    Object {
+      "duration": 250,
+      "easing": [Function],
+      "toValue": Object {
+        "x": 0,
+        "y": 0,
+      },
+    }
+  }
+  swipeReleaseAnimationFn={[Function]}
+  swipeStartMinDistance={15}
+>
+  <View
+    style={
+      Object {
+        "marginLeft": -0,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+          "width": 0,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "backgroundColor": "#70C1B3",
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 16,
+                "fontWeight": "300",
+              },
+              Object {
+                "marginHorizontal": 10,
+              },
+            ]
+          }
+        >
+          Edit
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "right": 2,
+          "width": 754,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginHorizontal": 20,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              10:15
+            </Text>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#95989A",
+                  "height": 8,
+                  "width": 1,
+                }
+              }
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              12:15
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 6,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingRight": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#247BA0",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 20,
+                "fontWeight": "300",
+              }
+            }
+          >
+            course name
+             
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#247BA0",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 20,
+                "fontWeight": "300",
+              }
+            }
+          >
+            Test location
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Course component renders correctly without optional props 1`] = `
+<View
+  leftActionActivationDistance={125}
+  leftActionReleaseAnimationConfig={null}
+  leftActionReleaseAnimationFn={null}
+  leftButtonWidth={75}
+  leftButtonsActivationDistance={75}
+  leftButtonsCloseReleaseAnimationConfig={null}
+  leftButtonsCloseReleaseAnimationFn={null}
+  leftButtonsOpenReleaseAnimationConfig={null}
+  leftButtonsOpenReleaseAnimationFn={null}
+  onLayout={[Function]}
+  onLeftActionActivate={[Function]}
+  onLeftActionComplete={[Function]}
+  onLeftActionDeactivate={[Function]}
+  onLeftActionRelease={[Function]}
+  onLeftButtonsActivate={[Function]}
+  onLeftButtonsCloseComplete={[Function]}
+  onLeftButtonsCloseRelease={[Function]}
+  onLeftButtonsDeactivate={[Function]}
+  onLeftButtonsOpenComplete={[Function]}
+  onLeftButtonsOpenRelease={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onPanAnimatedValueRef={[Function]}
+  onRef={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onRightActionActivate={[Function]}
+  onRightActionComplete={[Function]}
+  onRightActionDeactivate={[Function]}
+  onRightActionRelease={[Function]}
+  onRightButtonsActivate={[Function]}
+  onRightButtonsCloseComplete={[Function]}
+  onRightButtonsCloseRelease={[Function]}
+  onRightButtonsDeactivate={[Function]}
+  onRightButtonsOpenComplete={[Function]}
+  onRightButtonsOpenRelease={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onSwipeComplete={[Function]}
+  onSwipeMove={[Function]}
+  onSwipeRelease={[Function]}
+  onSwipeStart={[Function]}
+  rightActionActivationDistance={125}
+  rightActionReleaseAnimationConfig={null}
+  rightActionReleaseAnimationFn={null}
+  rightButtonWidth={75}
+  rightButtonsActivationDistance={75}
+  rightButtonsCloseReleaseAnimationConfig={null}
+  rightButtonsCloseReleaseAnimationFn={null}
+  rightButtonsOpenReleaseAnimationConfig={null}
+  rightButtonsOpenReleaseAnimationFn={null}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+  swipeReleaseAnimationConfig={
+    Object {
+      "duration": 250,
+      "easing": [Function],
+      "toValue": Object {
+        "x": 0,
+        "y": 0,
+      },
+    }
+  }
+  swipeReleaseAnimationFn={[Function]}
+  swipeStartMinDistance={15}
+>
+  <View
+    style={
+      Object {
+        "marginLeft": -0,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+          "width": 0,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "backgroundColor": "#70C1B3",
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 16,
+                "fontWeight": "300",
+              },
+              Object {
+                "marginHorizontal": 10,
+              },
+            ]
+          }
+        >
+          Edit
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 3,
+          "right": 2,
+          "width": 754,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginHorizontal": 20,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              10:15
+            </Text>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#95989A",
+                  "height": 8,
+                  "width": 1,
+                }
+              }
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              12:15
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 6,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingRight": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#247BA0",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 20,
+                "fontWeight": "300",
+              }
+            }
+          >
+            course name
+             
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#247BA0",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 20,
+                "fontWeight": "300",
+              }
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

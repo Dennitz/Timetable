@@ -1,0 +1,804 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddAppointmentButton renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#70C1B3",
+          "fontSize": 20,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Material Icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+      ]
+    }
+  >
+    
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "black",
+        "fontFamily": "Helvetica Neue",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "paddingHorizontal": 6,
+      }
+    }
+  >
+    Add appointment
+  </Text>
+</View>
+`;
+
+exports[`CourseForm renders correctly when hasRemoveButton is false 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ScrollViewMock
+    style={
+        Object {
+            "backgroundColor": "white",
+            "flex": 1,
+            "paddingHorizontal": 10,
+          }
+    }
+>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+        />
+    </View>
+</ScrollViewMock>,
+  "nodes": Array [
+    <ScrollViewMock
+      style={
+            Object {
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "paddingHorizontal": 10,
+                }
+      }
+>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <Field
+                  component={[Function]}
+                  name="name"
+                  placeholder="Title"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <FieldArray
+                  component={[Function]}
+                  name="appointments"
+                  navigateToAppointmentForm={[Function]}
+            />
+      </View>
+</ScrollViewMock>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <CourseForm
+        error={undefined}
+        hasRemoveButton={false}
+        navigateToAppointmentForm={[Function]}
+        onRemoveCourse={[Function]}
+        onSubmit={[Function]}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "error": undefined,
+          "hasRemoveButton": false,
+          "navigateToAppointmentForm": [Function],
+          "onRemoveCourse": [Function],
+          "onSubmit": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+</ScrollViewMock>,
+        "_debugID": 2,
+        "_renderedOutput": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+</ScrollViewMock>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <CourseForm
+    error={undefined}
+    hasRemoveButton={false}
+    navigateToAppointmentForm={[Function]}
+    onRemoveCourse={[Function]}
+    onSubmit={[Function]}
+/>,
+}
+`;
+
+exports[`CourseForm renders correctly when hasRemoveButton is true 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ScrollViewMock
+    style={
+        Object {
+            "backgroundColor": "white",
+            "flex": 1,
+            "paddingHorizontal": 10,
+          }
+    }
+>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+        />
+    </View>
+    <RemoveCourseButton
+        onPress={[Function]}
+    />
+</ScrollViewMock>,
+  "nodes": Array [
+    <ScrollViewMock
+      style={
+            Object {
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "paddingHorizontal": 10,
+                }
+      }
+>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <Field
+                  component={[Function]}
+                  name="name"
+                  placeholder="Title"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <FieldArray
+                  component={[Function]}
+                  name="appointments"
+                  navigateToAppointmentForm={[Function]}
+            />
+      </View>
+      <RemoveCourseButton
+            onPress={[Function]}
+      />
+</ScrollViewMock>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <CourseForm
+        error={undefined}
+        hasRemoveButton={true}
+        navigateToAppointmentForm={[Function]}
+        onRemoveCourse={[Function]}
+        onSubmit={[Function]}
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "error": undefined,
+          "hasRemoveButton": true,
+          "navigateToAppointmentForm": [Function],
+          "onRemoveCourse": [Function],
+          "onSubmit": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+          <RemoveCourseButton
+                    onPress={[Function]}
+          />
+</ScrollViewMock>,
+        "_debugID": 4,
+        "_renderedOutput": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+          <RemoveCourseButton
+                    onPress={[Function]}
+          />
+</ScrollViewMock>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <CourseForm
+    error={undefined}
+    hasRemoveButton={true}
+    navigateToAppointmentForm={[Function]}
+    onRemoveCourse={[Function]}
+    onSubmit={[Function]}
+/>,
+}
+`;
+
+exports[`CourseForm renders errors correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ScrollViewMock
+    style={
+        Object {
+            "backgroundColor": "white",
+            "flex": 1,
+            "paddingHorizontal": 10,
+          }
+    }
+>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+        />
+    </View>
+    <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+    >
+        an error message
+    </Text>
+    <View
+        style={
+            Object {
+                "marginVertical": 20,
+              }
+        }
+    >
+        <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+        />
+    </View>
+</ScrollViewMock>,
+  "nodes": Array [
+    <ScrollViewMock
+      style={
+            Object {
+                  "backgroundColor": "white",
+                  "flex": 1,
+                  "paddingHorizontal": 10,
+                }
+      }
+>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <Field
+                  component={[Function]}
+                  name="name"
+                  placeholder="Title"
+            />
+      </View>
+      <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+      >
+            an error message
+      </Text>
+      <View
+            style={
+                  Object {
+                        "marginVertical": 20,
+                      }
+            }
+      >
+            <FieldArray
+                  component={[Function]}
+                  name="appointments"
+                  navigateToAppointmentForm={[Function]}
+            />
+      </View>
+</ScrollViewMock>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <CourseForm
+        error="an error message"
+        hasRemoveButton={false}
+        navigateToAppointmentForm={[Function]}
+        onRemoveCourse={[Function]}
+        onSubmit={[Function]}
+/>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "error": "an error message",
+          "hasRemoveButton": false,
+          "navigateToAppointmentForm": [Function],
+          "onRemoveCourse": [Function],
+          "onSubmit": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+          >
+                    an error message
+          </Text>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+</ScrollViewMock>,
+        "_debugID": 6,
+        "_renderedOutput": <ScrollViewMock
+          style={
+                    Object {
+                              "backgroundColor": "white",
+                              "flex": 1,
+                              "paddingHorizontal": 10,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <Field
+                              component={[Function]}
+                              name="name"
+                              placeholder="Title"
+                    />
+          </View>
+          <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+          >
+                    an error message
+          </Text>
+          <View
+                    style={
+                              Object {
+                                        "marginVertical": 20,
+                                      }
+                    }
+          >
+                    <FieldArray
+                              component={[Function]}
+                              name="appointments"
+                              navigateToAppointmentForm={[Function]}
+                    />
+          </View>
+</ScrollViewMock>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <CourseForm
+    error="an error message"
+    hasRemoveButton={false}
+    navigateToAppointmentForm={[Function]}
+    onRemoveCourse={[Function]}
+    onSubmit={[Function]}
+/>,
+}
+`;
+
+exports[`RemoveCourseButton renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Remove course
+  </Text>
+</View>
+`;

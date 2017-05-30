@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DayBorder component renders a given date text and all children beneath that 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 2,
+      "marginVertical": 5,
+      "paddingTop": 4,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 6,
+      },
+      "shadowOpacity": 0.05,
+      "shadowRadius": 2,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginLeft": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#797979",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 16,
+          "fontWeight": "400",
+        }
+      }
+    >
+      some date
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#95989A",
+        "height": 0.5,
+        "marginHorizontal": 3,
+        "opacity": 0.4,
+      }
+    }
+  />
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Child 1
+    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#95989A",
+          "height": 0.5,
+          "marginHorizontal": 3,
+          "opacity": 0.4,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Child 2
+    </Text>
+  </View>
+</View>
+`;
