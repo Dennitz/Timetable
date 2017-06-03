@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
+import { TextInput } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import { MKTextField } from 'react-native-material-kit';
-import Textfield from '../Textfield';
+import Textfield from '../Textfield.ios';
 
 const props = {
   input: {
@@ -14,10 +14,6 @@ const props = {
 };
 
 describe('Textfield component', () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
-
   it('renders correctly', () => {
     const tree = renderer.create(<Textfield {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -38,7 +34,7 @@ describe('Textfield component', () => {
 
   it('uses props.input.value as value if defined', () => {
     const wrapper = shallow(<Textfield {...props} />);
-    const textfield = wrapper.find(MKTextField);
+    const textfield = wrapper.find(TextInput);
     expect(textfield.prop('value')).toBe(props.input.value);
   });
 
@@ -50,13 +46,13 @@ describe('Textfield component', () => {
       value: 'another value',
     };
     const wrapper = shallow(<Textfield {...otherProps} />);
-    const textfield = wrapper.find(MKTextField);
+    const textfield = wrapper.find(TextInput);
     expect(textfield.prop('value')).toBe(otherProps.value);
   });
 
   it('calls input.onChange with new input when input changes', () => {
     const wrapper = shallow(<Textfield {...props} />);
-    const textfield = wrapper.find(MKTextField);
+    const textfield = wrapper.find(TextInput);
     textfield.simulate('changeText', 'new text');
     const { onChange } = props.input;
     expect(onChange.mock.calls.length).toBe(1);

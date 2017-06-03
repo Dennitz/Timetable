@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TimetableScreen renders a TimetableDay for each element of appointmentsPerDay 1`] = `
+exports[`TimetableScreen renders correctly 1`] = `
 <View
   style={
     Object {

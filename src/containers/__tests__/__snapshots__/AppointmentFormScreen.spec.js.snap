@@ -44,7 +44,6 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <AppointmentFormScreen
         dispatch={[Function]}
-        initialValues={undefined}
         navigator={
                 Object {
                         "dismissAllModals": [Function],
@@ -63,6 +62,7 @@ ShallowWrapper {
                         "toggleNavBar": [Function],
                       }
         }
+        onSubmit={[Function]}
 />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -74,7 +74,6 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "dispatch": [Function],
-          "initialValues": undefined,
           "navigator": Object {
             "dismissAllModals": [Function],
             "dismissLightBox": [Function],
@@ -91,6 +90,7 @@ ShallowWrapper {
             "showModal": [Function],
             "toggleNavBar": [Function],
           },
+          "onSubmit": [Function],
         },
         "refs": Object {},
         "state": null,
@@ -152,7 +152,6 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <AppointmentFormScreen
     dispatch={[Function]}
-    initialValues={undefined}
     navigator={
         Object {
             "dismissAllModals": [Function],
@@ -171,6 +170,7 @@ ShallowWrapper {
             "toggleNavBar": [Function],
           }
     }
+    onSubmit={[Function]}
 />,
 }
 `;
