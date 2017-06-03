@@ -1,12 +1,32 @@
 // @flow
 /* eslint-disable no-undef */
+declare type AddAppointmentsAction = {
+  type: 'ADD_APPOINTMENTS',
+  appointments: AppointmentsState,
+}
+
+declare type RemoveAppointmentsAction = {
+  type: 'REMOVE_APPOINTMENTS',
+  appointmentIds: Array<string>,
+  courseId: string,
+}
+
+declare type EditCourseAction = {
+  type: 'EDIT_COURSE',
+  course: Course,
+}
+
+declare type RemoveCourseAction = {
+  type: 'REMOVE_COURSE',
+  courseId: string,
+  appointmentIds: Array<string>,
+}
+
 declare type Action =
-  { type: 'REMOVE_COURSE', courseId: string, appointmentIds: Array<string> }
-  | { type: 'EDIT_COURSE', course: Course }
-  | { type: 'REMOVE_APPOINTMENTS', appointmentIds: Array<string>, courseId: string }
-  | { type: 'ADD_APPOINTMENTS', appointments: AppointmentsState }
-  | { type: 'NEXT_WEEK' }
-  | { type: 'PREVIOUS_WEEK' }
+  AddAppointmentAction
+  | RemoveAppointmentsAction
+  | EditCourseAction
+  | RemoveCourseAction
 
 declare type ApplicationState = {
   form: Object,

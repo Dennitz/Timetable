@@ -5,7 +5,7 @@ export const ADD_APPOINTMENTS = 'ADD_APPOINTMENTS';
 /**
  * Add multiple appointments
  */
-export function addAppointments(appointments: AppointmentsState): Action {
+export function addAppointments(appointments: AppointmentsState): AddAppointmentsAction {
   return {
     type: ADD_APPOINTMENTS,
     appointments,
@@ -18,7 +18,7 @@ export function addAppointments(appointments: AppointmentsState): Action {
 export function removeAppointments(
   appointmentIds: Array<string>,
   courseId: string,
-): Action {
+): RemoveAppointmentsAction {
   return {
     type: REMOVE_APPOINTMENTS,
     appointmentIds,

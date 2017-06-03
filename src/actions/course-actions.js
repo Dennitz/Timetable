@@ -6,7 +6,7 @@ export function editCourse(
   name: string,
   courseId: string,
   appointmentIds: Array<string>,
-): Action {
+): EditCourseAction {
   return {
     type: EDIT_COURSE,
     course: {
@@ -20,7 +20,7 @@ export function editCourse(
 export function removeCourse(
   courseId: string,
   appointmentIds: Array<string>,
-): Action {
+): RemoveCourseAction {
   return {
     type: REMOVE_COURSE,
     courseId,
