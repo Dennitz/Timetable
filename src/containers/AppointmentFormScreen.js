@@ -34,10 +34,6 @@ const DecoratedAppointmentForm: () => React$Element<any> = reduxForm({
 
 // exported for tests
 export class AppointmentFormScreen extends React.Component {
-  static defaultProps = {
-    initialValues: undefined,
-  };
-
   static navigatorStyle = navBar;
   static navigatorButtons = {
     rightButtons: [

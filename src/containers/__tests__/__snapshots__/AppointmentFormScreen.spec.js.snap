@@ -9,10 +9,30 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <ReduxForm
+    initialValues={
+        Object {
+            "enddate": "2017-09-15T22:00:00.000Z",
+            "endtime": "2017-06-03T21:00:00.000Z",
+            "recurrence": "WEEKLY",
+            "startdate": "2017-06-02T22:00:00.000Z",
+            "starttime": "2017-06-03T20:00:00.000Z",
+          }
+    }
+    onRecurrencePress={[Function]}
     onSubmit={[Function]}
 />,
   "nodes": Array [
     <ReduxForm
+      initialValues={
+            Object {
+                  "enddate": "2017-09-15T22:00:00.000Z",
+                  "endtime": "2017-06-03T21:00:00.000Z",
+                  "recurrence": "WEEKLY",
+                  "startdate": "2017-06-02T22:00:00.000Z",
+                  "starttime": "2017-06-03T20:00:00.000Z",
+                }
+      }
+      onRecurrencePress={[Function]}
       onSubmit={[Function]}
 />,
   ],
@@ -24,14 +44,23 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <AppointmentFormScreen
         dispatch={[Function]}
-        navigation={
+        initialValues={undefined}
+        navigator={
                 Object {
-                        "setParams": [Function],
-                        "state": Object {
-                          "params": Object {
-                            "onSubmit": [Function],
-                          },
-                        },
+                        "dismissAllModals": [Function],
+                        "dismissLightBox": [Function],
+                        "dismissModal": [Function],
+                        "handleDeepLink": [Function],
+                        "pop": [Function],
+                        "popToRoot": [Function],
+                        "push": [Function],
+                        "resetTo": [Function],
+                        "setButtons": [Function],
+                        "setOnNavigatorEvent": [Function],
+                        "setTitle": [Function],
+                        "showLightBox": [Function],
+                        "showModal": [Function],
+                        "toggleNavBar": [Function],
                       }
         }
 />,
@@ -39,17 +68,28 @@ ShallowWrapper {
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": AppointmentFormScreen {
+        "_getInitialValues": [Function],
+        "_handleNavigatorEvent": [Function],
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
           "dispatch": [Function],
-          "navigation": Object {
-            "setParams": [Function],
-            "state": Object {
-              "params": Object {
-                "onSubmit": [Function],
-              },
-            },
+          "initialValues": undefined,
+          "navigator": Object {
+            "dismissAllModals": [Function],
+            "dismissLightBox": [Function],
+            "dismissModal": [Function],
+            "handleDeepLink": [Function],
+            "pop": [Function],
+            "popToRoot": [Function],
+            "push": [Function],
+            "resetTo": [Function],
+            "setButtons": [Function],
+            "setOnNavigatorEvent": [Function],
+            "setTitle": [Function],
+            "showLightBox": [Function],
+            "showModal": [Function],
+            "toggleNavBar": [Function],
           },
         },
         "refs": Object {},
@@ -73,10 +113,30 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <ReduxForm
+          initialValues={
+                    Object {
+                              "enddate": "2017-09-15T22:00:00.000Z",
+                              "endtime": "2017-06-03T21:00:00.000Z",
+                              "recurrence": "WEEKLY",
+                              "startdate": "2017-06-02T22:00:00.000Z",
+                              "starttime": "2017-06-03T20:00:00.000Z",
+                            }
+          }
+          onRecurrencePress={[Function]}
           onSubmit={[Function]}
 />,
         "_debugID": 2,
         "_renderedOutput": <ReduxForm
+          initialValues={
+                    Object {
+                              "enddate": "2017-09-15T22:00:00.000Z",
+                              "endtime": "2017-06-03T21:00:00.000Z",
+                              "recurrence": "WEEKLY",
+                              "startdate": "2017-06-02T22:00:00.000Z",
+                              "starttime": "2017-06-03T20:00:00.000Z",
+                            }
+          }
+          onRecurrencePress={[Function]}
           onSubmit={[Function]}
 />,
       },
@@ -92,14 +152,23 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <AppointmentFormScreen
     dispatch={[Function]}
-    navigation={
+    initialValues={undefined}
+    navigator={
         Object {
-            "setParams": [Function],
-            "state": Object {
-              "params": Object {
-                "onSubmit": [Function],
-              },
-            },
+            "dismissAllModals": [Function],
+            "dismissLightBox": [Function],
+            "dismissModal": [Function],
+            "handleDeepLink": [Function],
+            "pop": [Function],
+            "popToRoot": [Function],
+            "push": [Function],
+            "resetTo": [Function],
+            "setButtons": [Function],
+            "setOnNavigatorEvent": [Function],
+            "setTitle": [Function],
+            "showLightBox": [Function],
+            "showModal": [Function],
+            "toggleNavBar": [Function],
           }
     }
 />,

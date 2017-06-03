@@ -23,6 +23,15 @@ export interface Collapsible {
   expand: () => void,
 }
 
+/**
+ * Renders a field that collapses/expands on click (like in iOS calendar app datepickers).
+ *
+ * Calls props.onCollapse/props.onExpand when collapsing/expanding by click but not
+ * when collapsed/expanded programmatically by calling collapse()/exapand().
+ *
+ * Uses a <TextField /> to render the field itself (only thing that is visible when collapsed).
+ * Additional props are passed to TextField.
+ */
 export default class CollapsibleField extends React.Component implements Collapsible {
   static defaultProps = {
     children: undefined,

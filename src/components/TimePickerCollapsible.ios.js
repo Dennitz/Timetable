@@ -9,7 +9,7 @@ import type { Collapsible } from './CollapsibleField';
 const MINUTE_INTERVAL = 5;
 
 type Input = {
-  value: moment,
+  value: Date,
   onChange: (value: any) => void,
 }
 

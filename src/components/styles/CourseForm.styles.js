@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
   appointmentListContainer: {
     flex: 1,
   },
+  appointmentTextContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
   primaryText: {
     ...baseFont,
     color: colors.darkPrimary,

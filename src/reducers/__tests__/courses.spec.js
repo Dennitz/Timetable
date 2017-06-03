@@ -1,42 +1,43 @@
+// @flow
 import reducer from '../courses';
 import { EDIT_COURSE, REMOVE_COURSE } from '../../actions/course-actions';
-import { REMOVE_APPOINTMENT } from '../../actions/appointment-actions';
+import { REMOVE_APPOINTMENTS } from '../../actions/appointment-actions';
 
 describe('courses reducer', () => {
-  const testCourse1 = {
+  const testCourse1: Course = {
     id: 'course1',
     name: 'test course',
     appointments: ['app1', 'app2'],
   };
-  const state = {
+  const state: CoursesState = {
     course1: testCourse1,
   };
 
-  // initial state is modified for development
-  it.skip('returns the initial state', () => {
+  it('returns the initial state', () => {
     const initialState = {};
+    // $FlowFixMe
     expect(reducer(undefined, {})).toEqual(initialState);
   });
 
   it('handles REMOVE_COURSE', () => {
-    const action = {
+    const action: RemoveCourseAction = {
       type: REMOVE_COURSE,
       courseId: testCourse1.id,
-      appointments: testCourse1.appointments,
+      appointmentIds: testCourse1.appointments,
     };
     expect(reducer(state, action)).toEqual({});
   });
 
-  it('handles REMOVE_APPOINTMENT', () => {
-    const action = {
-      type: REMOVE_APPOINTMENT,
-      appointmentId: testCourse1.appointments[1],
+  it('handles REMOVE_APPOINTMENTS', () => {
+    const action: RemoveAppointmentsAction = {
+      type: REMOVE_APPOINTMENTS,
+      appointmentIds: [testCourse1.appointments[0]],
       courseId: testCourse1.id,
     };
-    const newState = {
+    const newState: CoursesState = {
       course1: {
         ...testCourse1,
-        appointments: ['app1'],
+        appointments: [testCourse1.appointments[1]],
       },
     };
     expect(reducer(state, action)).toEqual(newState);
@@ -44,11 +45,11 @@ describe('courses reducer', () => {
 
   describe('handles EDIT_COURSE', () => {
     it('adds a new course to empty state', () => {
-      const action = {
+      const action: EditCourseAction = {
         type: EDIT_COURSE,
         course: testCourse1,
       };
-      const newState = {
+      const newState: CoursesState = {
         course1: testCourse1,
       };
       expect(reducer({}, action)).toEqual(newState);
@@ -60,11 +61,11 @@ describe('courses reducer', () => {
         name: 'another course',
         appointments: ['app1', 'app2'],
       };
-      const action = {
+      const action: EditCourseAction = {
         type: EDIT_COURSE,
         course: testCourse2,
       };
-      const newState = {
+      const newState: CoursesState = {
         ...state,
         course2: testCourse2,
       };
@@ -76,11 +77,11 @@ describe('courses reducer', () => {
         ...testCourse1,
         name: 'another name',
       };
-      const action = {
+      const action: EditCourseAction = {
         type: EDIT_COURSE,
         course: newTestCourse1,
       };
-      const newState = {
+      const newState: CoursesState = {
         course1: newTestCourse1,
       };
       expect(reducer(state, action)).toEqual(newState);

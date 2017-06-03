@@ -23,7 +23,7 @@ declare type RemoveCourseAction = {
 }
 
 declare type Action =
-  AddAppointmentAction
+  AddAppointmentsAction
   | RemoveAppointmentsAction
   | EditCourseAction
   | RemoveCourseAction
@@ -32,7 +32,6 @@ declare type ApplicationState = {
   form: Object,
   appointments: AppointmentsState,
   courses: CoursesState,
-  weekStart: moment$Moment,
 }
 
 declare type AppointmentsState = { [id: string]: Appointment };

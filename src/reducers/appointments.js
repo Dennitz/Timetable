@@ -52,7 +52,7 @@ function isAppointmentOfWeek(appointment: Appointment, weekStart: moment) {
 }
 
 /**
- * year, month and day of appointment.starttime and appointment.endtime are dependent
+ * year, month and day of appointment.starttime and appointment.endtime may be dependent
  * on date of creation, so for comparison they need to be set to the same.
  */
 function getTimeOnFixedDate(time: moment$Moment) {

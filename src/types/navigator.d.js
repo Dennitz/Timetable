@@ -60,7 +60,7 @@ declare type NativeNavigator = {
 type NavigatorEvent = {
   type: 'NavBarButtonPress',
   id: string,
-};
+}
 
 type ButtonProps = {
   id: string,
@@ -73,7 +73,7 @@ type ButtonProps = {
   buttonColor?: string,
   buttonFontSize?: number,
   buttonFontWeight?: string,
-};
+}
 
 declare type NavigatorButtons = {
   leftButtons?: Array<ButtonProps>,

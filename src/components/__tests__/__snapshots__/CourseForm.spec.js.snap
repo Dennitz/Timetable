@@ -1,69 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddAppointmentButton renders correctly 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  hitSlop={undefined}
-  isTVSelectable={true}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "flexDirection": "row",
-      "opacity": 1,
-    }
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "color": "#70C1B3",
-          "fontSize": 20,
-        },
-        undefined,
-        Object {
-          "fontFamily": "Material Icons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-      ]
-    }
-  >
-    
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "color": "black",
-        "fontFamily": "Helvetica Neue",
-        "fontSize": 16,
-        "fontWeight": "300",
-        "paddingHorizontal": 6,
-      }
-    }
-  >
-    Add appointment
-  </Text>
-</View>
-`;
-
 exports[`CourseForm renders correctly when hasRemoveButton is false 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
@@ -77,36 +13,41 @@ ShallowWrapper {
         Object {
             "backgroundColor": "white",
             "flex": 1,
-            "paddingHorizontal": 10,
+            "paddingHorizontal": 16,
           }
     }
 >
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 32,
               }
         }
-    >
-        <Field
-            component={[Function]}
-            name="name"
-            placeholder="Title"
-        />
-    </View>
+    />
+    <Field
+        component={[Function]}
+        name="name"
+        placeholder="Title"
+    />
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 48,
               }
         }
-    >
-        <FieldArray
-            component={[Function]}
-            name="appointments"
-            navigateToAppointmentForm={[Function]}
-        />
-    </View>
+    />
+    <FieldArray
+        component={[Function]}
+        name="appointments"
+        navigateToAppointmentForm={[Function]}
+    />
+    <View
+        style={
+            Object {
+                "height": 48,
+              }
+        }
+    />
 </ScrollViewMock>,
   "nodes": Array [
     <ScrollViewMock
@@ -114,36 +55,41 @@ ShallowWrapper {
             Object {
                   "backgroundColor": "white",
                   "flex": 1,
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 16,
                 }
       }
 >
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 32,
                       }
             }
-      >
-            <Field
-                  component={[Function]}
-                  name="name"
-                  placeholder="Title"
-            />
-      </View>
+      />
+      <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+      />
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 48,
                       }
             }
-      >
-            <FieldArray
-                  component={[Function]}
-                  name="appointments"
-                  navigateToAppointmentForm={[Function]}
-            />
-      </View>
+      />
+      <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+      />
+      <View
+            style={
+                  Object {
+                        "height": 48,
+                      }
+            }
+      />
 </ScrollViewMock>,
   ],
   "options": Object {},
@@ -197,36 +143,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
 </ScrollViewMock>,
         "_debugID": 2,
         "_renderedOutput": <ScrollViewMock
@@ -234,36 +185,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
 </ScrollViewMock>,
       },
       "_renderedNodeType": 1,
@@ -299,36 +255,41 @@ ShallowWrapper {
         Object {
             "backgroundColor": "white",
             "flex": 1,
-            "paddingHorizontal": 10,
+            "paddingHorizontal": 16,
           }
     }
 >
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 32,
               }
         }
-    >
-        <Field
-            component={[Function]}
-            name="name"
-            placeholder="Title"
-        />
-    </View>
+    />
+    <Field
+        component={[Function]}
+        name="name"
+        placeholder="Title"
+    />
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 48,
               }
         }
-    >
-        <FieldArray
-            component={[Function]}
-            name="appointments"
-            navigateToAppointmentForm={[Function]}
-        />
-    </View>
+    />
+    <FieldArray
+        component={[Function]}
+        name="appointments"
+        navigateToAppointmentForm={[Function]}
+    />
+    <View
+        style={
+            Object {
+                "height": 48,
+              }
+        }
+    />
     <RemoveCourseButton
         onPress={[Function]}
     />
@@ -339,36 +300,41 @@ ShallowWrapper {
             Object {
                   "backgroundColor": "white",
                   "flex": 1,
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 16,
                 }
       }
 >
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 32,
                       }
             }
-      >
-            <Field
-                  component={[Function]}
-                  name="name"
-                  placeholder="Title"
-            />
-      </View>
+      />
+      <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+      />
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 48,
                       }
             }
-      >
-            <FieldArray
-                  component={[Function]}
-                  name="appointments"
-                  navigateToAppointmentForm={[Function]}
-            />
-      </View>
+      />
+      <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+      />
+      <View
+            style={
+                  Object {
+                        "height": 48,
+                      }
+            }
+      />
       <RemoveCourseButton
             onPress={[Function]}
       />
@@ -425,36 +391,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
           <RemoveCourseButton
                     onPress={[Function]}
           />
@@ -465,36 +436,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
           <RemoveCourseButton
                     onPress={[Function]}
           />
@@ -533,43 +509,41 @@ ShallowWrapper {
         Object {
             "backgroundColor": "white",
             "flex": 1,
-            "paddingHorizontal": 10,
+            "paddingHorizontal": 16,
           }
     }
 >
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 32,
               }
         }
-    >
-        <Field
-            component={[Function]}
-            name="name"
-            placeholder="Title"
-        />
-    </View>
-    <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-    >
-        an error message
-    </Text>
+    />
+    <Field
+        component={[Function]}
+        name="name"
+        placeholder="Title"
+    />
     <View
         style={
             Object {
-                "marginVertical": 20,
+                "height": 48,
               }
         }
-    >
-        <FieldArray
-            component={[Function]}
-            name="appointments"
-            navigateToAppointmentForm={[Function]}
-        />
-    </View>
+    />
+    <FieldArray
+        component={[Function]}
+        name="appointments"
+        navigateToAppointmentForm={[Function]}
+    />
+    <View
+        style={
+            Object {
+                "height": 48,
+              }
+        }
+    />
 </ScrollViewMock>,
   "nodes": Array [
     <ScrollViewMock
@@ -577,43 +551,41 @@ ShallowWrapper {
             Object {
                   "backgroundColor": "white",
                   "flex": 1,
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 16,
                 }
       }
 >
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 32,
                       }
             }
-      >
-            <Field
-                  component={[Function]}
-                  name="name"
-                  placeholder="Title"
-            />
-      </View>
-      <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-      >
-            an error message
-      </Text>
+      />
+      <Field
+            component={[Function]}
+            name="name"
+            placeholder="Title"
+      />
       <View
             style={
                   Object {
-                        "marginVertical": 20,
+                        "height": 48,
                       }
             }
-      >
-            <FieldArray
-                  component={[Function]}
-                  name="appointments"
-                  navigateToAppointmentForm={[Function]}
-            />
-      </View>
+      />
+      <FieldArray
+            component={[Function]}
+            name="appointments"
+            navigateToAppointmentForm={[Function]}
+      />
+      <View
+            style={
+                  Object {
+                        "height": 48,
+                      }
+            }
+      />
 </ScrollViewMock>,
   ],
   "options": Object {},
@@ -667,43 +639,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
-          <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-          >
-                    an error message
-          </Text>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
 </ScrollViewMock>,
         "_debugID": 6,
         "_renderedOutput": <ScrollViewMock
@@ -711,43 +681,41 @@ ShallowWrapper {
                     Object {
                               "backgroundColor": "white",
                               "flex": 1,
-                              "paddingHorizontal": 10,
+                              "paddingHorizontal": 16,
                             }
           }
 >
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 32,
                                       }
                     }
-          >
-                    <Field
-                              component={[Function]}
-                              name="name"
-                              placeholder="Title"
-                    />
-          </View>
-          <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-          >
-                    an error message
-          </Text>
+          />
+          <Field
+                    component={[Function]}
+                    name="name"
+                    placeholder="Title"
+          />
           <View
                     style={
                               Object {
-                                        "marginVertical": 20,
+                                        "height": 48,
                                       }
                     }
-          >
-                    <FieldArray
-                              component={[Function]}
-                              name="appointments"
-                              navigateToAppointmentForm={[Function]}
-                    />
-          </View>
+          />
+          <FieldArray
+                    component={[Function]}
+                    name="appointments"
+                    navigateToAppointmentForm={[Function]}
+          />
+          <View
+                    style={
+                              Object {
+                                        "height": 48,
+                                      }
+                    }
+          />
 </ScrollViewMock>,
       },
       "_renderedNodeType": 1,
@@ -793,12 +761,42 @@ exports[`RemoveCourseButton renders correctly 1`] = `
   testID={undefined}
   tvParallaxProperties={undefined}
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
+    style={
+      Array [
+        Object {
+          "shadowOffset": Object {
+            "height": 1.2,
+          },
+          "shadowOpacity": 0.183,
+          "shadowRadius": 1.08,
+        },
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#ff5252",
+          "height": 32,
+          "justifyContent": "center",
+        },
+      ]
+    }
   >
-    Remove course
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "Helvetica Neue",
+          "fontSize": 16,
+          "fontWeight": "500",
+          "marginHorizontal": 16,
+        }
+      }
+    >
+      Remove course
+    </Text>
+  </View>
 </View>
 `;

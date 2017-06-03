@@ -2,7 +2,6 @@
 import React from 'react';
 import { Alert, LayoutAnimation, ScrollView, View, TouchableOpacity, Text } from 'react-native';
 import { Field, FieldArray } from 'redux-form';
-import moment from 'moment';
 import i18n from 'react-native-i18n';
 import ElevatedView from 'react-native-elevated-view';
 
@@ -55,7 +54,7 @@ export function Appointments({
               }}
               onRowPress={() => navigateToAppointmentForm(values, index)}
             >
-              <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+              <View style={styles.appointmentTextContainer}>
                 <Text style={styles.primaryText}>
                   {`${recurrenceText} ${startdate.format('dddd')}, `}
                 </Text>

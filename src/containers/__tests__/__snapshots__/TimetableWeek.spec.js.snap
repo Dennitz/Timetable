@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimetableScreen renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View>
+    <Connect(TimetableDay)
+        appointmentsOfDay={
+            Array [
+                Object {
+                  "course": "course1",
+                  "enddate": "2017-01-31T23:00:00.000Z",
+                  "endtime": "2017-01-01T01:00:00.000Z",
+                  "id": "app1",
+                  "recurrence": "WEEKLY",
+                  "startdate": "2016-12-31T23:00:00.000Z",
+                  "starttime": "2016-12-31T23:00:00.000Z",
+                },
+                Object {
+                  "course": "course1",
+                  "enddate": "2017-01-31T23:00:00.000Z",
+                  "endtime": "2017-01-01T01:00:00.000Z",
+                  "id": "app3",
+                  "recurrence": "WEEKLY",
+                  "startdate": "2016-12-31T23:00:00.000Z",
+                  "starttime": "2017-01-01T00:00:00.000Z",
+                },
+              ]
+        }
+        day="Sunday, January 1, 2017"
+    />
+    <Connect(TimetableDay)
+        appointmentsOfDay={
+            Array [
+                Object {
+                  "course": "course1",
+                  "enddate": "2017-01-31T23:00:00.000Z",
+                  "endtime": "2017-01-01T01:00:00.000Z",
+                  "id": "app2",
+                  "recurrence": "WEEKLY",
+                  "startdate": "2017-01-01T23:00:00.000Z",
+                  "starttime": "2016-12-31T23:00:00.000Z",
+                },
+              ]
+        }
+        day="Monday, January 2, 2017"
+    />
+</View>,
+  "nodes": Array [
+    <View>
+      <Connect(TimetableDay)
+            appointmentsOfDay={
+                  Array [
+                        Object {
+                          "course": "course1",
+                          "enddate": "2017-01-31T23:00:00.000Z",
+                          "endtime": "2017-01-01T01:00:00.000Z",
+                          "id": "app1",
+                          "recurrence": "WEEKLY",
+                          "startdate": "2016-12-31T23:00:00.000Z",
+                          "starttime": "2016-12-31T23:00:00.000Z",
+                        },
+                        Object {
+                          "course": "course1",
+                          "enddate": "2017-01-31T23:00:00.000Z",
+                          "endtime": "2017-01-01T01:00:00.000Z",
+                          "id": "app3",
+                          "recurrence": "WEEKLY",
+                          "startdate": "2016-12-31T23:00:00.000Z",
+                          "starttime": "2017-01-01T00:00:00.000Z",
+                        },
+                      ]
+            }
+            day="Sunday, January 1, 2017"
+      />
+      <Connect(TimetableDay)
+            appointmentsOfDay={
+                  Array [
+                        Object {
+                          "course": "course1",
+                          "enddate": "2017-01-31T23:00:00.000Z",
+                          "endtime": "2017-01-01T01:00:00.000Z",
+                          "id": "app2",
+                          "recurrence": "WEEKLY",
+                          "startdate": "2017-01-01T23:00:00.000Z",
+                          "starttime": "2016-12-31T23:00:00.000Z",
+                        },
+                      ]
+            }
+            day="Monday, January 2, 2017"
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <TimetableWeek
+        appointmentsPerDay={
+                Array [
+                        Array [
+                          Object {
+                            "course": "course1",
+                            "enddate": "2017-01-31T23:00:00.000Z",
+                            "endtime": "2017-01-01T01:00:00.000Z",
+                            "id": "app1",
+                            "recurrence": "WEEKLY",
+                            "startdate": "2016-12-31T23:00:00.000Z",
+                            "starttime": "2016-12-31T23:00:00.000Z",
+                          },
+                          Object {
+                            "course": "course1",
+                            "enddate": "2017-01-31T23:00:00.000Z",
+                            "endtime": "2017-01-01T01:00:00.000Z",
+                            "id": "app3",
+                            "recurrence": "WEEKLY",
+                            "startdate": "2016-12-31T23:00:00.000Z",
+                            "starttime": "2017-01-01T00:00:00.000Z",
+                          },
+                        ],
+                        Array [
+                          Object {
+                            "course": "course1",
+                            "enddate": "2017-01-31T23:00:00.000Z",
+                            "endtime": "2017-01-01T01:00:00.000Z",
+                            "id": "app2",
+                            "recurrence": "WEEKLY",
+                            "startdate": "2017-01-01T23:00:00.000Z",
+                            "starttime": "2016-12-31T23:00:00.000Z",
+                          },
+                        ],
+                      ]
+        }
+        week={"2016-12-31T23:00:00.000Z"}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "appointmentsPerDay": Array [
+            Array [
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app1",
+                "recurrence": "WEEKLY",
+                "startdate": "2016-12-31T23:00:00.000Z",
+                "starttime": "2016-12-31T23:00:00.000Z",
+              },
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app3",
+                "recurrence": "WEEKLY",
+                "startdate": "2016-12-31T23:00:00.000Z",
+                "starttime": "2017-01-01T00:00:00.000Z",
+              },
+            ],
+            Array [
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app2",
+                "recurrence": "WEEKLY",
+                "startdate": "2017-01-01T23:00:00.000Z",
+                "starttime": "2016-12-31T23:00:00.000Z",
+              },
+            ],
+          ],
+          "week": "2016-12-31T23:00:00.000Z",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View>
+          <Connect(TimetableDay)
+                    appointmentsOfDay={
+                              Array [
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app1",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2016-12-31T23:00:00.000Z",
+                                          "starttime": "2016-12-31T23:00:00.000Z",
+                                        },
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app3",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2016-12-31T23:00:00.000Z",
+                                          "starttime": "2017-01-01T00:00:00.000Z",
+                                        },
+                                      ]
+                    }
+                    day="Sunday, January 1, 2017"
+          />
+          <Connect(TimetableDay)
+                    appointmentsOfDay={
+                              Array [
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app2",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2017-01-01T23:00:00.000Z",
+                                          "starttime": "2016-12-31T23:00:00.000Z",
+                                        },
+                                      ]
+                    }
+                    day="Monday, January 2, 2017"
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View>
+          <Connect(TimetableDay)
+                    appointmentsOfDay={
+                              Array [
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app1",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2016-12-31T23:00:00.000Z",
+                                          "starttime": "2016-12-31T23:00:00.000Z",
+                                        },
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app3",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2016-12-31T23:00:00.000Z",
+                                          "starttime": "2017-01-01T00:00:00.000Z",
+                                        },
+                                      ]
+                    }
+                    day="Sunday, January 1, 2017"
+          />
+          <Connect(TimetableDay)
+                    appointmentsOfDay={
+                              Array [
+                                        Object {
+                                          "course": "course1",
+                                          "enddate": "2017-01-31T23:00:00.000Z",
+                                          "endtime": "2017-01-01T01:00:00.000Z",
+                                          "id": "app2",
+                                          "recurrence": "WEEKLY",
+                                          "startdate": "2017-01-01T23:00:00.000Z",
+                                          "starttime": "2016-12-31T23:00:00.000Z",
+                                        },
+                                      ]
+                    }
+                    day="Monday, January 2, 2017"
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <TimetableWeek
+    appointmentsPerDay={
+        Array [
+            Array [
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app1",
+                "recurrence": "WEEKLY",
+                "startdate": "2016-12-31T23:00:00.000Z",
+                "starttime": "2016-12-31T23:00:00.000Z",
+              },
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app3",
+                "recurrence": "WEEKLY",
+                "startdate": "2016-12-31T23:00:00.000Z",
+                "starttime": "2017-01-01T00:00:00.000Z",
+              },
+            ],
+            Array [
+              Object {
+                "course": "course1",
+                "enddate": "2017-01-31T23:00:00.000Z",
+                "endtime": "2017-01-01T01:00:00.000Z",
+                "id": "app2",
+                "recurrence": "WEEKLY",
+                "startdate": "2017-01-01T23:00:00.000Z",
+                "starttime": "2016-12-31T23:00:00.000Z",
+              },
+            ],
+          ]
+    }
+    week={"2016-12-31T23:00:00.000Z"}
+/>,
+}
+`;

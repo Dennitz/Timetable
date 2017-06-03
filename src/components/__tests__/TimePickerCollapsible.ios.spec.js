@@ -5,34 +5,31 @@ import { shallow } from 'enzyme';
 import CollapsibleField from '../CollapsibleField';
 import TimePickerCollapsible from '../TimePickerCollapsible.ios';
 
-describe('TimePickerCollapsible', () => {
-  const props = {
-    starttime: {
-      input: {
-        onChange: jest.fn(),
-        value: new Date(1),
-      },
-      meta: {
-        submitFailed: true,
-        error: 'starttime error',
-      },
+const props = {
+  starttime: {
+    input: {
+      onChange: jest.fn(),
+      value: new Date(1),
     },
-    endtime: {
-      input: {
-        onChange: jest.fn(),
-        value: new Date(2),
-      },
-      meta: {
-        submitFailed: true,
-        error: 'endtime error',
-      },
+    meta: {
+      submitFailed: true,
+      error: 'starttime error',
     },
-    placeholder: 'Some time',
-  };
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
+  },
+  endtime: {
+    input: {
+      onChange: jest.fn(),
+      value: new Date(2),
+    },
+    meta: {
+      submitFailed: true,
+      error: 'endtime error',
+    },
+  },
+  placeholder: 'Some time',
+};
 
+describe('TimePickerCollapsible', () => {
   it('renders correctly', () => {
     const tree = renderer.create(<TimePickerCollapsible {...props} />).toJSON();
     expect(tree).toMatchSnapshot();

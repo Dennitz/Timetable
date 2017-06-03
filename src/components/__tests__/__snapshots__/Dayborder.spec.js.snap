@@ -1,26 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DayBorder component renders a given date text and all children beneath that 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "white",
-      "borderRadius": 2,
-      "marginVertical": 5,
-      "paddingTop": 4,
-      "shadowColor": "black",
-      "shadowOffset": Object {
-        "height": 6,
-      },
-      "shadowOpacity": 0.05,
-      "shadowRadius": 2,
-    }
-  }
->
+<View>
   <View
     style={
       Object {
-        "marginLeft": 10,
+        "height": 48,
+        "justifyContent": "center",
+        "marginLeft": 16,
       }
     }
   >
@@ -30,10 +17,10 @@ exports[`DayBorder component renders a given date text and all children beneath 
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#797979",
+          "color": "rgba(0, 0, 0, 0.54)",
           "fontFamily": "Helvetica Neue",
-          "fontSize": 16,
-          "fontWeight": "400",
+          "fontSize": 14,
+          "fontWeight": "500",
         }
       }
     >
@@ -42,39 +29,66 @@ exports[`DayBorder component renders a given date text and all children beneath 
   </View>
   <View
     style={
-      Object {
-        "backgroundColor": "#95989A",
-        "height": 0.5,
-        "marginHorizontal": 3,
-        "opacity": 0.4,
-      }
-    }
-  />
-  <View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
-      Child 1
-    </Text>
-    <View
-      style={
+      Array [
         Object {
-          "backgroundColor": "#95989A",
-          "height": 0.5,
-          "marginHorizontal": 3,
-          "opacity": 0.4,
+          "shadowOffset": Object {
+            "height": 1.2,
+          },
+          "shadowOpacity": 0.183,
+          "shadowRadius": 1.08,
+        },
+        Object {
+          "backgroundColor": "white",
+        },
+      ]
+    }
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Child 1
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.12)",
+              "height": 1,
+              "marginHorizontal": 0,
+            },
+            Object {
+              "height": 0.5,
+              "marginHorizontal": 8,
+            },
+          ]
         }
-      }
-    />
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-    >
-      Child 2
-    </Text>
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Child 2
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.12)",
+              "height": 1,
+              "marginHorizontal": 0,
+            },
+            Object {
+              "height": 0.5,
+              "marginHorizontal": 8,
+            },
+          ]
+        }
+      />
+    </View>
   </View>
 </View>
 `;

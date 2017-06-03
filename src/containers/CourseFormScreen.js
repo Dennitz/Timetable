@@ -31,7 +31,7 @@ type Props = {
   navigator: NativeNavigator,
 }
 
-type CourseFormInput = {
+export type CourseFormInput = {
   name: string,
   appointments: Array<AppointmentInput & {
     id?: string,
@@ -46,10 +46,6 @@ const DecoratedCourseForm: () => React$Element<any> = reduxForm({
 
 // exported for tests
 export class CourseFormScreen extends React.Component {
-  static defaultProps = {
-    courseId: undefined,
-  };
-
   static navigatorStyle = navBar;
   static navigatorButtons = {
     rightButtons: [

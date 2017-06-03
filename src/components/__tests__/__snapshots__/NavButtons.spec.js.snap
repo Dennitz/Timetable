@@ -6,7 +6,14 @@ exports[`renders AddButton correctly 1`] = `
   accessibilityLabel={undefined}
   accessibilityTraits={undefined}
   accessible={true}
-  hitSlop={undefined}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
   isTVSelectable={true}
   onLayout={undefined}
   onResponderGrant={[Function]}
@@ -31,7 +38,7 @@ exports[`renders AddButton correctly 1`] = `
       Array [
         Object {
           "color": "white",
-          "fontSize": 22,
+          "fontSize": 24,
         },
         undefined,
         Object {
@@ -179,7 +186,14 @@ exports[`renders CloseButton correctly 1`] = `
   accessibilityLabel={undefined}
   accessibilityTraits={undefined}
   accessible={true}
-  hitSlop={undefined}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
   isTVSelectable={true}
   onLayout={undefined}
   onResponderGrant={[Function]}
@@ -204,7 +218,7 @@ exports[`renders CloseButton correctly 1`] = `
       Array [
         Object {
           "color": "white",
-          "fontSize": 22,
+          "fontSize": 24,
         },
         undefined,
         Object {

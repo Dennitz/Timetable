@@ -14,7 +14,8 @@ type Props = OwnProps & {
   appointmentsPerDay: AppointmentsPerDay,
 }
 
-function TimetableWeek(props: Props) {
+// exported for tests
+export function TimetableWeek(props: Props) {
   const { appointmentsPerDay, week } = props;
   return (
     <View>

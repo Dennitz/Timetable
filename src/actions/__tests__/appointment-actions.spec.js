@@ -1,52 +1,52 @@
 // @flow
 import moment from 'moment';
 import { WEEKLY } from '../../lib/recurrence';
-import { SUN } from '../../lib/weekdays';
-import * as actions from '../appointment-actions';
+import {
+  addAppointments,
+  removeAppointments,
+  ADD_APPOINTMENTS,
+  REMOVE_APPOINTMENTS,
+} from '../appointment-actions';
+
+const fixedMoment = moment('01-01-2017', 'MM-DD-YYYY').startOf('day');
+
+const appointment1: Appointment = {
+  id: 'app1',
+  course: 'course1',
+  startdate: fixedMoment,
+  enddate: fixedMoment.clone().add(2, 'weeks'),
+  starttime: fixedMoment,
+  endtime: fixedMoment.clone().add(2, 'hours'),
+  recurrence: WEEKLY,
+};
+const appointment2: Appointment = {
+  ...appointment1,
+  id: 'app2',
+};
+
+const appointments: AppointmentsState = {
+  app1: appointment1,
+  app2: appointment2,
+};
 
 describe('appointment action creators', () => {
-  it('creates an action to add or edit an appointment', () => {
-    const startdate = moment('01-01-2017', 'MM-DD-YYYY').day(0); // sunday
-    const enddate = startdate.add(3, 'weeks');
-    const appointment: AppointmentInput = {
-      dates: {
-        start: startdate,
-        end: enddate,
-      },
-      starttime: new Date(1),
-      endtime: new Date(2),
-      recurrence: WEEKLY,
-      location: 'location',
-      type: 'lecture',
+  test('addAppointmens returns an ADD_APPOINTMENTS action to add multiple courses', () => {
+    const expectedAction: AddAppointmentsAction = {
+      type: ADD_APPOINTMENTS,
+      appointments,
     };
-    const appointmentId = 'appointment1';
-    const courseId = 'course1';
-    const expectedAction = {
-      type: actions.EDIT_APPOINTMENT,
-      appointment: {
-        id: appointmentId,
-        course: courseId,
-        startdate,
-        enddate,
-        day: SUN,
-        starttime: new Date(1),
-        endtime: new Date(2),
-        recurrence: WEEKLY,
-        location: 'location',
-        type: 'lecture',
-      },
-    };
-    expect(actions.editAppointment(appointment, appointmentId, courseId)).toEqual(expectedAction);
+    expect(addAppointments(appointments)).toEqual(expectedAction);
   });
 
-  it('creates an action to remove an appointment', () => {
-    const appointmentId = 'appointment1';
+  test('removeAppointments returns an REMOVE_APPOINTMENTS action ' +
+    'to remove multiple appointments of a single course', () => {
+    const appointmentIds = ['app1', 'app2', 'app3'];
     const courseId = 'course1';
-    const expectedAction = {
-      type: actions.REMOVE_APPOINTMENT,
-      appointmentId,
+    const expectedAction: RemoveAppointmentsAction = {
+      type: REMOVE_APPOINTMENTS,
+      appointmentIds,
       courseId,
     };
-    expect(actions.removeAppointment(appointmentId, courseId)).toEqual(expectedAction);
+    expect(removeAppointments(appointmentIds, courseId)).toEqual(expectedAction);
   });
 });

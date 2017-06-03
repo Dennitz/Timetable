@@ -1,5 +1,5 @@
 /* eslint-disable */
-require('react-native-mock/mock');
+// require('react-native-mock/mock'); // incompatible with current react version
 require('../../src/i18n/I18n');
 
 jest.mock('Linking', () => ({

@@ -11,12 +11,14 @@ exports[`HorizontalDividerList component renders children with horizontal divide
   </Text>
   <View
     style={
-      Object {
-        "backgroundColor": "#95989A",
-        "height": 0.5,
-        "marginHorizontal": 3,
-        "opacity": 0.4,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.12)",
+          "height": 1,
+          "marginHorizontal": 0,
+        },
+        undefined,
+      ]
     }
   />
   <Text
@@ -28,12 +30,14 @@ exports[`HorizontalDividerList component renders children with horizontal divide
   </Text>
   <View
     style={
-      Object {
-        "backgroundColor": "#95989A",
-        "height": 0.5,
-        "marginHorizontal": 3,
-        "opacity": 0.4,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.12)",
+          "height": 1,
+          "marginHorizontal": 0,
+        },
+        undefined,
+      ]
     }
   />
   <Text
@@ -43,5 +47,17 @@ exports[`HorizontalDividerList component renders children with horizontal divide
   >
     Child 3
   </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(0, 0, 0, 0.12)",
+          "height": 1,
+          "marginHorizontal": 0,
+        },
+        undefined,
+      ]
+    }
+  />
 </View>
 `;

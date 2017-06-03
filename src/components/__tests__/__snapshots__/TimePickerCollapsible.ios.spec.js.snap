@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TimePickerCollapsible renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "overflow": "hidden",
+    }
+  }
+>
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
@@ -20,81 +26,84 @@ exports[`TimePickerCollapsible renders correctly 1`] = `
   >
     <View>
       <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "height": 48,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
           }
         }
+        testID={undefined}
+        tvParallaxProperties={undefined}
       >
-        <TextInput
-          allowFontScaling={undefined}
-          editable={false}
-          onBlur={[Function]}
-          onChangeText={[Function]}
-          onFocus={[Function]}
-          placeholder="Some time"
-          secureTextEntry={undefined}
-          style={
-            Array [
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "transparent",
-                "marginTop": 0,
-                "paddingBottom": 2,
-                "paddingTop": 2,
-              },
-              Object {
-                "color": "rgb(117, 117, 117)",
-                "fontSize": 16,
-                "paddingLeft": 0,
-                "paddingRight": 0,
-              },
-              Object {
-                "flex": 1,
-              },
-            ]
-          }
-          underlineColorAndroid="transparent"
-          value="01:00 until 01:00"
-        />
         <View
-          pointerEvents="none"
           style={
             Object {
-              "height": 1,
+              "flex": 1,
             }
           }
         >
-          <View
+          <TextInput
+            clearButtonMode="while-editing"
+            editable={false}
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onCollapse={[Function]}
+            onExpand={[Function]}
+            onFocus={[Function]}
+            placeholder="Some time"
+            placeholderTextColor="rgba(0, 0, 0, 0.38)"
             style={
               Object {
-                "backgroundColor": "red",
-                "height": 1,
-                "position": "absolute",
-                "width": 0,
+                "alignItems": "flex-end",
+                "color": "rgba(0, 0, 0, 0.87)",
+                "fontFamily": "Helvetica Neue",
+                "fontSize": 16,
+                "fontWeight": "400",
+                "height": 28,
+                "lineHeight": 16,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#247BA0",
-                "height": 1,
-                "left": 0,
-                "position": "absolute",
-                "width": 0,
-              }
-            }
+            value="1:00 AM - 1:00 AM"
           />
         </View>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "height": 1,
+            },
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.12)",
+            },
+          ]
+        }
+      />
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "red",
+            "color": "#ff1744",
+            "fontFamily": "Helvetica Neue",
+            "fontSize": 14,
+            "marginTop": 8,
           }
         }
       >
@@ -103,7 +112,6 @@ exports[`TimePickerCollapsible renders correctly 1`] = `
     </View>
   </View>
   <View
-    pointerEvents="none"
     style={
       Object {
         "height": 0,
@@ -113,7 +121,14 @@ exports[`TimePickerCollapsible renders correctly 1`] = `
   >
     <View
       onLayout={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
     >
       <View
         style={
@@ -136,7 +151,7 @@ exports[`TimePickerCollapsible renders correctly 1`] = `
             date={1}
             maximumDate={undefined}
             minimumDate={undefined}
-            minuteInterval={undefined}
+            minuteInterval={5}
             mode="time"
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}
@@ -169,7 +184,7 @@ exports[`TimePickerCollapsible renders correctly 1`] = `
             date={2}
             maximumDate={undefined}
             minimumDate={undefined}
-            minuteInterval={undefined}
+            minuteInterval={5}
             mode="time"
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}

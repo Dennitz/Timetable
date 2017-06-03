@@ -5,7 +5,6 @@ import { shallow } from 'enzyme';
 import
 CourseForm, {
   RemoveCourseButton,
-  AddAppointmentButton,
 } from '../CourseForm';
 
 describe('CourseForm', () => {
@@ -38,13 +37,6 @@ describe('CourseForm', () => {
     };
     const wrapper = shallow(<CourseForm {...otherProps} />);
     expect(wrapper).toMatchSnapshot();
-  });
-});
-
-describe('AddAppointmentButton', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<AddAppointmentButton onPress={() => { }} />).toJSON();
-    expect(tree).toMatchSnapshot();
   });
 });
 

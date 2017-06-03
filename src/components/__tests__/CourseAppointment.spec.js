@@ -1,30 +1,27 @@
 // @flow
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Course from '../CourseAppointment';
+import moment from 'moment';
+import CourseAppointment from '../CourseAppointment';
 
-const starttime = new Date(2000, 1, 1, 10, 15);
-const endtime = new Date(2000, 1, 1, 12, 15);
+const fixedMoment = moment('01-01-2017', 'MM-DD-YYYY').startOf('day');
 
-describe('Course component', () => {
-  let props;
-  beforeEach(() => {
-    props = {
-      name: 'course name',
-      starttime,
-      endtime,
-      onEdit: jest.fn(),
-    };
-  });
+const props = {
+  name: 'CourseAppointment name',
+  starttime: fixedMoment,
+  endtime: fixedMoment.clone().add(1, 'hour'),
+  onEdit: jest.fn(),
+};
 
+describe('CourseAppointment component', () => {
   it('renders correctly without optional props', () => {
-    const tree = renderer.create(<Course {...props} />).toJSON();
+    const tree = renderer.create(<CourseAppointment {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly with optional props', () => {
     const tree = renderer.create(
-      <Course {...props} location="Test location" type="Lecture" />,
+      <CourseAppointment {...props} location="Test location" type="Lecture" />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

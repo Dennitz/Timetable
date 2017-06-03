@@ -1,28 +1,34 @@
 // @flow
-import * as actions from '../course-actions';
+import {
+  editCourse,
+  removeCourse,
+  EDIT_COURSE,
+  REMOVE_COURSE,
+} from '../course-actions';
 
 const COURSE_ID = 'course1';
 const APPOINTMENT_IDS = ['appointment1, appointment2'];
 
 describe('course action creators', () => {
-  it("creates an action to remove a course with all it's appointments", () => {
+  it("removeCourse creates an action to remove a course with all it's appointments", () => {
     const expectedAction = {
-      type: actions.REMOVE_COURSE,
+      type: REMOVE_COURSE,
       courseId: COURSE_ID,
       appointmentIds: APPOINTMENT_IDS,
     };
-    expect(actions.removeCourse(COURSE_ID, APPOINTMENT_IDS)).toEqual(expectedAction);
+    expect(removeCourse(COURSE_ID, APPOINTMENT_IDS)).toEqual(expectedAction);
   });
 
-  it('creates an action to add or edit a course', () => {
+  test('editAppointments returns an action to add or edit a course', () => {
+    const name = 'test name';
     const expectedAction = {
-      type: actions.EDIT_COURSE,
+      type: EDIT_COURSE,
       course: {
         id: COURSE_ID,
-        name: 'test name',
         appointments: APPOINTMENT_IDS,
+        name,
       },
     };
-    expect(actions.editCourse(COURSE_ID, 'test name', APPOINTMENT_IDS)).toEqual(expectedAction);
+    expect(editCourse(name, COURSE_ID, APPOINTMENT_IDS)).toEqual(expectedAction);
   });
 });
