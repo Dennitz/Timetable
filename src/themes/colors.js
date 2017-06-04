@@ -19,9 +19,6 @@ const colors = {
   cardBackground: 'white',
   courseBackground: 'white',
   navButton: 'white',
-
-  calendarSecondary: '#70C1B3',
-  calendarContrast: '#FF1654',
 };
 
 export default colors;

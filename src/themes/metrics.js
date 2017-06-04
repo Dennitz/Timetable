@@ -12,15 +12,6 @@ const metrics = {
   icons: {
     tiny: 18,
     small: 24,
-    medium: 35,
-    large: 45,
-    xl: 60,
-  },
-  images: {
-    small: 20,
-    medium: 40,
-    large: 60,
-    logo: 300,
   },
 };
 
