@@ -21,6 +21,10 @@ const store = createStore(
   ),
 );
 
+/**
+ * moments are stored as strings, so they must be converted back
+ * to moments
+ */
 function recursiveToDate(value) {
   if (R.is(Object, value) && !R.is(String, value)) {
     return R.map(recursiveToDate, value);
