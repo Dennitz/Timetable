@@ -3,14 +3,9 @@
 A simple and clean timetable app for iOS.  
 Written completely in JavaScript using React Native.
 
-<img 
-src="assets/main-screen.png" 
-alt="screenshot"
-style="height:400px;">
-</img>
+<img src="/assets/main-screen.png?raw=true" width="240" alt="screenshot">
 
-<a href="https://itunes.apple.com/us/app/clean-timetable/id1242105557?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;z-index:1">
-</a>
+[<img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" width="135" height="40" alt="Download on the App Store">](https://itunes.apple.com/us/app/clean-timetable/id1242105557?mt=8)
 
 ## What's used
 
