@@ -186,8 +186,8 @@ export class CourseFormScreen extends React.Component {
         navigateToAppointmentForm={(values, index) => {
           this.props.navigator.push({
             screen: APPOINTMENT_FORM,
-            title: i18n.t('Appointment'),
-            backButtonTitle: i18n.t('Cancel'),
+            title: i18n.t('appointment'),
+            backButtonTitle: i18n.t('cancel'),
             passProps: {
               index,
               initialValues: values,

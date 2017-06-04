@@ -32,7 +32,7 @@ class EditSelectionScreen extends React.Component {
     rightButtons: [
       {
         id: 'edit',
-        title: i18n.t('Edit'),
+        title: i18n.t('edit'),
       },
     ],
   };
@@ -91,8 +91,8 @@ class EditSelectionScreen extends React.Component {
         onRemovePress={this._handleRemovePress}
         onPress={id => navigator.push({
           screen: COURSE_FORM,
-          title: i18n.t('Course'),
-          backButtonTitle: i18n.t('Cancel'),
+          title: i18n.t('course'),
+          backButtonTitle: i18n.t('cancel'),
           passProps: {
             courseId: id,
           },

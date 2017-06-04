@@ -81,13 +81,13 @@ export default class TimetableScreen extends React.Component {
       <AddButton
         onPress={() => this.props.navigator.showModal({
           screen: COURSE_FORM,
-          title: i18n.t('Course'),
+          title: i18n.t('course'),
           navigatorButtons: {
             ...CourseFormScreen.navigatorButtons,
             leftButtons: [
               {
                 id: 'cancel',
-                title: i18n.t('Cancel'),
+                title: i18n.t('cancel'),
               },
             ],
           },
@@ -96,7 +96,7 @@ export default class TimetableScreen extends React.Component {
       <EditButton
         onPress={() => this.props.navigator.showModal({
           screen: EDIT_SELECTION,
-          title: i18n.t('Courses'),
+          title: i18n.t('courses'),
         })}
       />
     </View>

@@ -83,7 +83,7 @@ export class AppointmentFormScreen extends React.Component {
         }}
         onRecurrencePress={input => navigator.push({
           screen: RECURRENCE_PICKER,
-          title: i18n.t('Repeat'),
+          title: i18n.t('repeat'),
           passProps: {
             input,
           },

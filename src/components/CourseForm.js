@@ -44,7 +44,7 @@ export function Appointments({
       {fields.map((field, index) => {
         const values: AppointmentInput = fields.get(index);
         const { startdate, enddate, starttime, endtime, recurrence } = values;
-        const recurrenceText = (recurrence === WEEKLY && i18n.t('Every')) || i18n.t('Every-2nd');
+        const recurrenceText = (recurrence === WEEKLY && i18n.t('every')) || i18n.t('every-2nd');
         return (
           <View key={field}>
             <RemoveButtonRow
@@ -107,8 +107,8 @@ export default function CourseForm({
               i18n.t('remove-course'),
               i18n.t('remove-course-alert'),
               [
-                { text: i18n.t('Delete'), onPress: onRemoveCourse, style: 'destructive' },
-                { text: i18n.t('Cancel'), style: 'cancel' },
+                { text: i18n.t('delete'), onPress: onRemoveCourse, style: 'destructive' },
+                { text: i18n.t('cancel'), style: 'cancel' },
               ],
             );
           }}

@@ -36,7 +36,7 @@ function RecurrenceRow({ input, onRecurrencePress }: Props & FieldProps) {
       onPress={() => onRecurrencePress(input)}
       editable={false}
       value={i18n.t(input.value)}
-      label={i18n.t('Repeat')}
+      label={i18n.t('repeat')}
     />
   );
 }
@@ -92,7 +92,7 @@ export default class AppointmentForm extends React.Component {
           ref={(field) => { this._fieldRefs.startdateRef = field; }}
           name={'startdate'}
           component={DatePickerCollapsible}
-          label={i18n.t('Starts')}
+          label={i18n.t('starts')}
           onExpand={() => this._handleExpand(startdateRef)}
         />
         <View style={styles.spacer} />
@@ -101,7 +101,7 @@ export default class AppointmentForm extends React.Component {
           ref={(field) => { this._fieldRefs.enddateRef = field; }}
           name={'enddate'}
           component={DatePickerCollapsible}
-          label={i18n.t('Ends')}
+          label={i18n.t('ends')}
           onExpand={() => this._handleExpand(enddateRef)}
         />
         <View style={styles.spacer} />
