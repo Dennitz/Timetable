@@ -66,13 +66,14 @@ export default class TimetableScreen extends React.Component {
   }
 
   state: {
-    scrollAnimX: Animated.AnimatedValue;
+    scrollAnimX: Animated.Value;
   };
 
-  _flatList: FlatList;
+  _flatList: FlatList<*>;
   props: Props;
 
   _scrollToCurrentWeek = () => {
+    // $FlowFixMe, getNode is a function and it seems to be needed
     this._flatList.getNode().scrollToIndex({ index: getCurrentWeekIndex() });
   };
 
@@ -135,7 +136,6 @@ export default class TimetableScreen extends React.Component {
       <ScrollView
         key={week.format('D MMM YYYY')}
         style={{ width: SCREEN_WIDTH }}
-        removeClippedSubviews={false}
         scrollsToTop={false}
       >
         <TimetableWeek week={week} />
@@ -164,13 +164,12 @@ export default class TimetableScreen extends React.Component {
             offset: SCREEN_WIDTH * index,
             index,
           })}
-          contentOffset={{ x: SCREEN_WIDTH * getCurrentWeekIndex(), y: 0 }}
           pagingEnabled
           horizontal
           showsHorizontalScrollIndicator={false}
           initialNumToRender={0}
+          initialScrollIndex={getCurrentWeekIndex()}
           updateCellsBatchingPeriod={10}
-          removeClippedSubviews={false}
           scrollEventThrottle={1}
           onScroll={Animated.event(
             [{ nativeEvent: { contentOffset: { x: this.state.scrollAnimX } } }],
