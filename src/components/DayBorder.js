@@ -9,7 +9,7 @@ import styles from './styles/DayBorder.styles';
 type Props = {
   date: string,
   children?: React.Element<any>,
-};
+}
 
 export default function DayBorder({ date, children }: Props) {
   return (

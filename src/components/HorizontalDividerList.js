@@ -5,7 +5,7 @@ import styles from './styles/HorizontalDividerList.styles';
 
 type Props = {
   children?: React$Element<any>,
-  dividerStyle?: Object,
+  dividerStyle?: any,
   hasBottomDivider?: boolean,
 }
 
