@@ -130,7 +130,7 @@ export default class TimetableScreen extends React.Component {
     );
   };
 
-  _renderWeek = (week: moment, index: number) => (
+  _renderWeek = (week: moment, index: number, isCurrentWeek: boolean) => (
     <View>
       {this._renderNavBarTitle(week, index)}
       <ScrollView
@@ -138,13 +138,14 @@ export default class TimetableScreen extends React.Component {
         style={{ width: SCREEN_WIDTH }}
         scrollsToTop={false}
       >
-        <TimetableWeek week={week} />
+        <TimetableWeek week={week} shouldCloseLaunchScreen={isCurrentWeek} />
         <View style={styles.bottomSpacer} />
       </ScrollView>
     </View>
   );
 
   render() {
+    const currentWeekIndex = getCurrentWeekIndex();
     return (
       <View style={styles.container}>
         <View style={styles.statusbar} />
@@ -158,7 +159,7 @@ export default class TimetableScreen extends React.Component {
           data={WEEKS}
           keyExtractor={month => month.format('D MMM YYYY')}
           renderItem={({ item, index }) =>
-            this._renderWeek(item, index)}
+            this._renderWeek(item, index, currentWeekIndex === index)}
           getItemLayout={(_, index) => ({
             length: SCREEN_WIDTH,
             offset: SCREEN_WIDTH * index,
@@ -168,7 +169,7 @@ export default class TimetableScreen extends React.Component {
           horizontal
           showsHorizontalScrollIndicator={false}
           initialNumToRender={0}
-          initialScrollIndex={getCurrentWeekIndex()}
+          initialScrollIndex={currentWeekIndex}
           updateCellsBatchingPeriod={10}
           scrollEventThrottle={1}
           onScroll={Animated.event(

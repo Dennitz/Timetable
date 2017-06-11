@@ -2,11 +2,18 @@
 import React from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
 import { makeGetSortedAppointmentsPerDay } from '../reducers/appointments';
 import TimetableDay from './TimetableDay';
 import type { AppointmentsPerDay } from '../reducers/appointments';
 
 type OwnProps = {
+  /**
+   * If shouldCloseLaunchScreen is true, the launch screen will be closed
+   * when this component did mount. This is used to only close the launch
+   * screen when the initial screen finished rendering.
+   */
+  shouldCloseLaunchScreen: boolean,
   week: moment$Moment,
 }
 
@@ -15,22 +22,33 @@ type Props = OwnProps & {
 }
 
 // exported for tests
-export function TimetableWeek(props: Props) {
-  const { appointmentsPerDay, week } = props;
-  return (
-    <View>
-      {appointmentsPerDay.map((appointmentsOfDay, index) => {
-        const dateString = week.clone().weekday(index).format('dddd, LL');
-        return (
-          <TimetableDay
-            day={dateString}
-            appointmentsOfDay={appointmentsOfDay}
-            key={dateString}
-          />
-        );
-      })}
-    </View>
-  );
+export class TimetableWeek extends React.Component {
+
+  componentDidMount() {
+    if (this.props.shouldCloseLaunchScreen) {
+      SplashScreen.hide();
+    }
+  }
+
+  props: Props;
+
+  render() {
+    const { appointmentsPerDay, week } = this.props;
+    return (
+      <View>
+        {appointmentsPerDay.map((appointmentsOfDay, index) => {
+          const dateString = week.clone().weekday(index).format('dddd, LL');
+          return (
+            <TimetableDay
+              day={dateString}
+              appointmentsOfDay={appointmentsOfDay}
+              key={dateString}
+            />
+          );
+        })}
+      </View>
+    );
+  }
 }
 
 function makeMapStateToProps() {

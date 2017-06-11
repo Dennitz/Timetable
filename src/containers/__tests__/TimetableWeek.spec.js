@@ -31,6 +31,7 @@ const appointmentsPerDay = [
 ];
 
 const props = {
+  shouldCloseLaunchScreen: false,
   week: fixedMoment.startOf('week'),
   appointmentsPerDay,
 };
