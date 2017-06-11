@@ -10,18 +10,18 @@
   "dependencies": {
     "moment": "^2.18.1",
     "moment-range": "^3.0.3",
-    "ramda": "^0.24.0",
+    "ramda": "^0.24.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.0",
     "react-native-elevated-view": "^0.0.4",
     "react-native-i18n": "^1.0.0",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",
     "react-native-material-kit": "^0.4.1",
-    "react-native-navigation": "latest",
+    "react-native-navigation": "^1.1.93",
     "react-native-vector-icons": "^4.2.0",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
-    "redux-form": "^6.7.0",
+    "redux-form": "^6.8.0",
     "redux-persist": "^4.8.0",
     "reselect": "^3.0.1",
     "uuid": "^3.0.1"
@@ -56,7 +56,7 @@
       "./config/jest/setup.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation)"
+      "node_modules/(?!(jest-)?react-native)"
     ],
     "resetMocks": true,
     "resetModules": true
