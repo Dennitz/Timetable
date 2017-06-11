@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-launch" translatesAutoresizingMaskIntoConstraints="NO" id="Eqi-UG-ghe">
-                    <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                    <rect key="frame" x="107" y="253.5" width="160" height="160"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="5l9-eB-3YB"/>
-                        <constraint firstAttribute="width" constant="200" id="FQh-hE-o9V"/>
+                        <constraint firstAttribute="height" constant="160" id="5l9-eB-3YB"/>
+                        <constraint firstAttribute="width" constant="160" id="FQh-hE-o9V"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -33,6 +33,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon-launch" width="200" height="200"/>
+        <image name="icon-launch" width="160" height="160"/>
     </resources>
 </document>
