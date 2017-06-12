@@ -60,7 +60,7 @@ class EditSelectionScreen extends React.Component {
 
         this.setState({ editing: !this.state.editing });
 
-        const newTitle = this.state.editing ? 'Done' : 'Edit';
+        const newTitle = this.state.editing ? 'done' : 'edit';
         this.props.navigator.setButtons({
           rightButtons: [
             {
