@@ -65,7 +65,7 @@ export default class TextField extends React.Component {
           onPress={onPress}
         >
           {label && <Text style={styles.label}>{label}</Text>}
-          <View style={styles.fieldContainer}>
+          <View style={styles.fieldContainer} pointerEvents={isButton ? 'none' : 'auto'}>
             <TextInput
               style={(label && styles.textInputWithLabel) || styles.textInput}
               placeholderTextColor={placeholderColor || colors.darkHint}

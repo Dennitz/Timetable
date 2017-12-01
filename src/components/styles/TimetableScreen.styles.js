@@ -1,8 +1,9 @@
 // @flow
 import { StyleSheet } from 'react-native';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 import { colors, fonts } from '../../themes';
 
-export const STATUSBAR_HEIGHT = 20;
+export const STATUSBAR_HEIGHT = isIphoneX() ? 44 : 20;
 export const NAVBAR_HEIGHT = 44;
 
 const styles = StyleSheet.create({

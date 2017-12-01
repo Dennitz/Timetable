@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 /* eslint-disable import/no-unresolved, import/extensions */
 import Textfield from './Textfield';
-/* eslint-enable import/no-unresolved, import/extensions*/
+/* eslint-enable import/no-unresolved, import/extensions */
 
 type Props = {
   children?: React.Element<any>,
@@ -100,6 +100,7 @@ export default class CollapsibleField extends React.Component implements Collaps
           <View>
             <Textfield
               editable={false}
+              pointerEvents="none"
               meta={meta}
               value={headerText}
               {...rest}

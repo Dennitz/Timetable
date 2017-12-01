@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83CBBA2D1A601D0E00E9B192"
+               BlueprintIdentifier = "2D2A28121D9B038B00D4039D"
                BuildableName = "libReact.a"
-               BlueprintName = "React"
+               BlueprintName = "React-tvOS"
                ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Timetable.temp_caseinsensitive_rename.app"
-               BlueprintName = "Timetable"
+               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+               BuildableName = "Timetable-tvOS.app"
+               BlueprintName = "Timetable-tvOS"
                ReferencedContainer = "container:Timetable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "TimetableTests.xctest"
-               BlueprintName = "TimetableTests"
+               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
+               BuildableName = "Timetable-tvOSTests.xctest"
+               BlueprintName = "Timetable-tvOSTests"
                ReferencedContainer = "container:Timetable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -54,16 +54,25 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
+               BuildableName = "Timetable-tvOSTests.xctest"
+               BlueprintName = "Timetable-tvOSTests"
+               ReferencedContainer = "container:Timetable.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Timetable.temp_caseinsensitive_rename.app"
-            BlueprintName = "Timetable"
+            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            BuildableName = "Timetable-tvOS.app"
+            BlueprintName = "Timetable-tvOS"
             ReferencedContainer = "container:Timetable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -74,7 +83,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -85,9 +93,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Timetable.temp_caseinsensitive_rename.app"
-            BlueprintName = "Timetable"
+            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            BuildableName = "Timetable-tvOS.app"
+            BlueprintName = "Timetable-tvOS"
             ReferencedContainer = "container:Timetable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -104,9 +112,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Timetable.temp_caseinsensitive_rename.app"
-            BlueprintName = "Timetable"
+            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            BuildableName = "Timetable-tvOS.app"
+            BlueprintName = "Timetable-tvOS"
             ReferencedContainer = "container:Timetable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
