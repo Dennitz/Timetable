@@ -7,7 +7,8 @@
   "extends": [
     "react-native",
     "plugin:flowtype/recommended",
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "plugins": [
     "react",
@@ -57,7 +58,7 @@
     ],
     "flowtype/semi": [
       2,
-      "never"
+      "always"
     ]
   }
 }

@@ -8,7 +8,7 @@ type OwnProps = {
     onChange: (value: 'WEEKLY' | 'BIWEEKLY') => void,
   },
   navigator: NativeNavigator,
-}
+};
 
 /**
  * connected as form: 'appointmentForm' because it is part of appointmentForm,
@@ -20,10 +20,12 @@ const DecoratedRecurrencePicker: () => React$Element<any> = reduxForm({
   forceUnregisterOnUnmount: true,
 })(RecurrencePickerList);
 
-
 const appointmentFormSelector = formValueSelector('appointmentForm');
 
-function mapStateToProps(state: ApplicationState, { input, navigator }: OwnProps) {
+function mapStateToProps(
+  state: ApplicationState,
+  { input, navigator }: OwnProps,
+) {
   return {
     onSelect: (value: 'WEEKLY' | 'BIWEEKLY') => {
       input.onChange(value);

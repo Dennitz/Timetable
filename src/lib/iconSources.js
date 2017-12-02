@@ -13,12 +13,14 @@ const iconSources = {
   close: undefined,
 };
 
-const iconsLoaded = new Promise((resolve) => {
+// $FlowFixMe
+const iconsLoaded = new Promise(resolve => {
   const iconNamePropsPairs = toPairs(icons);
   Promise.all(
     iconNamePropsPairs.map(([iconName, iconProps]) =>
-      Icon.getImageSource(iconName, iconProps.size)),
-  ).then((sources) => {
+      Icon.getImageSource(iconName, iconProps.size),
+    ),
+  ).then(sources => {
     iconNamePropsPairs.forEach(([iconName], index) => {
       iconSources[iconName] = sources[index];
     });

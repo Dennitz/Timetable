@@ -14,27 +14,35 @@ import styles from './styles/RecurrencePickerList.styles';
 type Props = {
   onSelect: (value: 'WEEKLY' | 'BIWEEKLY') => void,
   selectedRecurrence: 'WEEKLY' | 'BIWEEKLY',
-}
+};
 
 const recurrenceOptions = [WEEKLY, BIWEEKLY];
 
-export default function RecurrencePickerList({ onSelect, selectedRecurrence }: Props) {
+export default function RecurrencePickerList({
+  onSelect,
+  selectedRecurrence,
+}: Props) {
   return (
     <ScrollView style={styles.container}>
       <HorizontalDividerList dividerStyle={styles.divider}>
-        {recurrenceOptions.map(recurrence =>
-          (<TouchableOpacity
+        {recurrenceOptions.map(recurrence => (
+          <TouchableOpacity
             style={styles.row}
             onPress={() => onSelect(recurrence)}
             key={recurrence}
           >
             <View style={styles.checkmarkContainer}>
-              {selectedRecurrence === recurrence &&
-                <Icon name={'check'} size={metrics.icons.small} color={colors.secondaryA200} />}
+              {selectedRecurrence === recurrence && (
+                <Icon
+                  name={'check'}
+                  size={metrics.icons.small}
+                  color={colors.secondaryA200}
+                />
+              )}
             </View>
             <Text style={styles.text}>{i18n.t(recurrence)}</Text>
-          </TouchableOpacity>),
-        )}
+          </TouchableOpacity>
+        ))}
       </HorizontalDividerList>
     </ScrollView>
   );

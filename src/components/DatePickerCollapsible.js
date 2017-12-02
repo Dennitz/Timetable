@@ -18,23 +18,29 @@ type Props = {
   onExpand?: () => void,
 }
 
-export default class DatePickerCollapsible extends React.Component implements Collapsible {
+export default class DatePickerCollapsible extends React.Component<Props, {}>
+  implements Collapsible {
   collapse = () => {
-    this._collapsibleRef.collapse();
+    if (this._collapsibleRef) {
+      this._collapsibleRef.collapse();
+    }
   };
 
   expand = () => {
-    this._collapsibleRef.expand();
+    if (this._collapsibleRef) {
+      this._collapsibleRef.expand();
+    }
   };
 
-  _collapsibleRef: CollapsibleField;
-  props: Props;
+  _collapsibleRef: CollapsibleField | null;
 
   render() {
     const { input, ...rest } = this.props;
     return (
       <CollapsibleField
-        ref={(collapsible) => { this._collapsibleRef = collapsible; }}
+        ref={(collapsible) => {
+          this._collapsibleRef = collapsible;
+        }}
         headerText={input.value.format('dddd, ll')}
         {...rest}
       >

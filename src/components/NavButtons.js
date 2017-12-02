@@ -7,9 +7,13 @@ import { colors, metrics } from '../themes';
 type ButtonProps = {
   color?: string,
   onPress: Function,
-}
+};
 
-function NavButtonBase(name: string, onPress: Function, color?: string = colors.navButton) {
+function NavButtonBase(
+  name: string,
+  onPress: Function,
+  color?: string = colors.navButton,
+) {
   return (
     <TouchableOpacity
       onPress={onPress}

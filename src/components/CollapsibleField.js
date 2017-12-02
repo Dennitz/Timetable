@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import {
   Animated,
   StyleSheet,
@@ -11,16 +11,20 @@ import Textfield from './Textfield';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 type Props = {
-  children?: React.Element<any>,
+  children?: React.Node,
   headerText: string,
   meta: Object,
   onCollapse: () => void,
   onExpand: () => void,
 }
 
+type State = {
+  collapsibleHeight: Animated.Value,
+}
+
 export interface Collapsible {
-  collapse: () => void,
-  expand: () => void,
+  collapse: () => void;
+  expand: () => void;
 }
 
 /**
@@ -32,11 +36,12 @@ export interface Collapsible {
  * Uses a <TextField /> to render the field itself (only thing that is visible when collapsed).
  * Additional props are passed to TextField.
  */
-export default class CollapsibleField extends React.Component implements Collapsible {
+export default class CollapsibleField extends React.Component<Props, State>
+  implements Collapsible {
   static defaultProps = {
     children: undefined,
-    onCollapse: () => { },
-    onExpand: () => { },
+    onCollapse: () => {},
+    onExpand: () => {},
   };
 
   constructor(props: Props) {
@@ -47,10 +52,6 @@ export default class CollapsibleField extends React.Component implements Collaps
     this._collapsed = true;
     this._childrenHeight = 0;
   }
-
-  state: {
-    collapsibleHeight: Animated.Value,
-  };
 
   collapse = () => {
     this._animateCollapsibleHeight(0);
@@ -63,13 +64,10 @@ export default class CollapsibleField extends React.Component implements Collaps
   };
 
   _animateCollapsibleHeight = (toValue: number) => {
-    Animated.timing(
-      this.state.collapsibleHeight,
-      {
-        toValue,
-        duration: 220,
-      },
-    ).start();
+    Animated.timing(this.state.collapsibleHeight, {
+      toValue,
+      duration: 220,
+    }).start();
   };
 
   _toggle = () => {
@@ -89,7 +87,6 @@ export default class CollapsibleField extends React.Component implements Collaps
 
   _collapsed: boolean;
   _childrenHeight: number;
-  props: Props;
 
   render() {
     const { children, headerText, meta, ...rest } = this.props;
@@ -107,8 +104,13 @@ export default class CollapsibleField extends React.Component implements Collaps
             />
           </View>
         </TouchableWithoutFeedback>
-        <Animated.View style={[styles.container, { height: this.state.collapsibleHeight }]}>
-          <View onLayout={this._setChildrenHeight} style={styles.childrenContainer}>
+        <Animated.View
+          style={[styles.container, { height: this.state.collapsibleHeight }]}
+        >
+          <View
+            onLayout={this._setChildrenHeight}
+            style={styles.childrenContainer}
+          >
             {children}
           </View>
         </Animated.View>

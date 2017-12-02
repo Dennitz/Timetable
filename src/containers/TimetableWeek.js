@@ -15,29 +15,29 @@ type OwnProps = {
    */
   shouldCloseLaunchScreen: boolean,
   week: moment$Moment,
-}
+};
 
 type Props = OwnProps & {
   appointmentsPerDay: AppointmentsPerDay,
-}
+};
 
 // exported for tests
-export class TimetableWeek extends React.Component {
-
+export class TimetableWeek extends React.Component<Props, {}> {
   componentDidMount() {
     if (this.props.shouldCloseLaunchScreen) {
       SplashScreen.hide();
     }
   }
 
-  props: Props;
-
   render() {
     const { appointmentsPerDay, week } = this.props;
     return (
       <View>
         {appointmentsPerDay.map((appointmentsOfDay, index) => {
-          const dateString = week.clone().weekday(index).format('dddd, LL');
+          const dateString = week
+            .clone()
+            .weekday(index)
+            .format('dddd, LL');
           return (
             <TimetableDay
               day={dateString}
@@ -59,7 +59,8 @@ function makeMapStateToProps() {
   return mapStateToProps;
 }
 
-const ConnectedTimetableWeek: (props: OwnProps) => React$Element<any>
-  = connect(makeMapStateToProps)(TimetableWeek);
+const ConnectedTimetableWeek: (props: OwnProps) => React$Element<any> = connect(
+  makeMapStateToProps,
+)(TimetableWeek);
 
 export default ConnectedTimetableWeek;

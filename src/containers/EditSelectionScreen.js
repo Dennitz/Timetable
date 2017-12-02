@@ -15,12 +15,16 @@ type Props = {
   courses: Array<Course>,
   dispatch: Function,
   navigator: NativeNavigator,
-}
+};
+
+type State = {
+  editing: boolean,
+};
 
 const editAnimation = LayoutAnimation.create(100, 'linear', 'opacity');
 const deleteAnimation = LayoutAnimation.create(80, 'linear', 'opacity');
 
-class EditSelectionScreen extends React.Component {
+class EditSelectionScreen extends React.Component<Props, State> {
   static navigatorStyle = navBar;
   static navigatorButtons: NavigatorButtons = {
     leftButtons: [
@@ -44,10 +48,6 @@ class EditSelectionScreen extends React.Component {
       editing: false,
     };
   }
-
-  state: {
-    editing: boolean,
-  };
 
   _handleNavigatorEvent = (event: Object) => {
     const { navigator } = this.props;
@@ -80,8 +80,6 @@ class EditSelectionScreen extends React.Component {
     dispatch(removeCourse(courseId, appointmentIds));
   };
 
-  props: Props;
-
   render() {
     const { courses, navigator } = this.props;
     return (
@@ -89,14 +87,16 @@ class EditSelectionScreen extends React.Component {
         courses={courses}
         showRemoveButtons={this.state.editing}
         onRemovePress={this._handleRemovePress}
-        onPress={id => navigator.push({
-          screen: COURSE_FORM,
-          title: i18n.t('course'),
-          backButtonTitle: i18n.t('cancel'),
-          passProps: {
-            courseId: id,
-          },
-        })}
+        onPress={id =>
+          navigator.push({
+            screen: COURSE_FORM,
+            title: i18n.t('course'),
+            backButtonTitle: i18n.t('cancel'),
+            passProps: {
+              courseId: id,
+            },
+          })
+        }
       />
     );
   }

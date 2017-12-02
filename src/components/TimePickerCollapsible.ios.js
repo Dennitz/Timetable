@@ -26,10 +26,15 @@ type Props = {
   },
 }
 
+type State = {
+  minuteInterval: 1 | 2 | 3 | 4 | 5 | 6 | 10 | 12 | 15 | 20 | 30 | void,
+}
+
 /**
  * To be used as component in a redux-form Fields component
  */
-export default class TimePickerCollapsible extends React.Component implements Collapsible {
+export default class TimePickerCollapsible extends React.Component<Props, State>
+  implements Collapsible {
   state = {
     minuteInterval: undefined,
   };
@@ -44,35 +49,46 @@ export default class TimePickerCollapsible extends React.Component implements Co
   /* eslint-enable react/no-did-mount-set-state */
 
   collapse = () => {
-    this._collapsibleRef.collapse();
+    if (this._collapsibleRef) {
+      this._collapsibleRef.collapse();
+    }
   };
 
   expand = () => {
-    this._collapsibleRef.expand();
+    if (this._collapsibleRef) {
+      this._collapsibleRef.expand();
+    }
   };
 
-  _collapsibleRef: CollapsibleField;
-  props: Props;
+  _collapsibleRef: CollapsibleField | null;
 
   render() {
     const { starttime, endtime, ...rest } = this.props;
-    const headerText = starttime.input.value && endtime.input.value &&
-      `${moment(starttime.input.value).format('LT')} - ${
-      moment(endtime.input.value).format('LT')}`;
+    const { minuteInterval } = this.state;
+    const headerText =
+      starttime.input.value &&
+      endtime.input.value &&
+      `${moment(starttime.input.value).format('LT')} - ${moment(
+        endtime.input.value,
+      ).format('LT')}`;
+
     return (
       <CollapsibleField
-        ref={(collapsible) => { this._collapsibleRef = collapsible; }}
+        ref={(collapsible) => {
+          this._collapsibleRef = collapsible;
+        }}
         headerText={headerText}
         meta={endtime.meta}
         {...rest}
       >
         <View style={styles.pickerContainer}>
+          {/* $FlowIssue */}
           <DatePickerIOS
             {...starttime.input}
             date={starttime.input.value}
             onDateChange={starttime.input.onChange}
             mode="time"
-            minuteInterval={this.state.minuteInterval}
+            minuteInterval={minuteInterval}
             style={styles.picker}
           />
           <View style={styles.dash} />
@@ -81,7 +97,7 @@ export default class TimePickerCollapsible extends React.Component implements Co
             date={endtime.input.value}
             onDateChange={endtime.input.onChange}
             mode="time"
-            minuteInterval={this.state.minuteInterval}
+            minuteInterval={minuteInterval}
             style={styles.picker}
           />
         </View>

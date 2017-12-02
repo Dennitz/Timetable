@@ -1,6 +1,13 @@
 // @flow
 import React from 'react';
-import { Alert, LayoutAnimation, ScrollView, View, TouchableOpacity, Text } from 'react-native';
+import {
+  Alert,
+  LayoutAnimation,
+  ScrollView,
+  View,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { Field, FieldArray } from 'redux-form';
 import i18n from 'react-native-i18n';
 import ElevatedView from 'react-native-elevated-view';
@@ -20,31 +27,30 @@ type CourseFormProps = {
   navigateToAppointmentForm: (values?: any, index?: number) => void,
   onRemoveCourse: () => void,
   onSubmit: (input: Object) => void,
-}
+};
 
 // exported for tests
 export function RemoveCourseButton({ onPress }: { onPress: Function }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <ElevatedView elevation={2} style={styles.removeCourseButton}>
-        <Text style={styles.removeCourseButtonText}>{i18n.t('remove-course')}</Text>
+        <Text style={styles.removeCourseButtonText}>
+          {i18n.t('remove-course')}
+        </Text>
       </ElevatedView>
     </TouchableOpacity>
   );
 }
 
 // exported for tests
-export function Appointments({
-  fields,
-  meta,
-  navigateToAppointmentForm,
-}: any) {
+export function Appointments({ fields, meta, navigateToAppointmentForm }: any) {
   return (
     <View style={styles.appointmentListContainer}>
       {fields.map((field, index) => {
         const values: AppointmentInput = fields.get(index);
         const { startdate, enddate, starttime, endtime, recurrence } = values;
-        const recurrenceText = (recurrence === WEEKLY && i18n.t('every')) || i18n.t('every-2nd');
+        const recurrenceText =
+          (recurrence === WEEKLY && i18n.t('every')) || i18n.t('every-2nd');
         return (
           <View key={field}>
             <RemoveButtonRow
@@ -62,7 +68,9 @@ export function Appointments({
                   {`${starttime.format('LT')} - ${endtime.format('LT')},`}
                 </Text>
               </View>
-              <Text style={styles.primaryText}>{`${startdate.format('L')} - ${enddate.format('L')}`}</Text>
+              <Text style={styles.primaryText}>{`${startdate.format(
+                'L',
+              )} - ${enddate.format('L')}`}</Text>
             </RemoveButtonRow>
             <View style={styles.shortHorizontalLine} />
           </View>
@@ -88,11 +96,7 @@ export default function CourseForm({
   return (
     <ScrollView style={styles.container}>
       <View style={styles.navBarSpacer} />
-      <Field
-        name="name"
-        component={Textfield}
-        placeholder={i18n.t('title')}
-      />
+      <Field name="name" component={Textfield} placeholder={i18n.t('title')} />
       <View style={styles.spacer} />
       <FieldArray
         name="appointments"
@@ -100,20 +104,24 @@ export default function CourseForm({
         navigateToAppointmentForm={navigateToAppointmentForm}
       />
       <View style={styles.spacer} />
-      {hasRemoveButton &&
+      {hasRemoveButton && (
         <RemoveCourseButton
           onPress={() => {
             Alert.alert(
               i18n.t('remove-course'),
               i18n.t('remove-course-alert'),
               [
-                { text: i18n.t('delete'), onPress: onRemoveCourse, style: 'destructive' },
+                {
+                  text: i18n.t('delete'),
+                  onPress: onRemoveCourse,
+                  style: 'destructive',
+                },
                 { text: i18n.t('cancel'), style: 'cancel' },
               ],
             );
           }}
         />
-      }
+      )}
     </ScrollView>
   );
 }

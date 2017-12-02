@@ -1,12 +1,12 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { colors, metrics } from '../themes';
 import styles from './styles/ChevronRowButton.styles';
 
 type Props = {
-  children?: React$Element<any>,
+  children?: React.Node,
   height?: number,
   onPress: Function,
 }
@@ -15,11 +15,13 @@ type Props = {
 export default function ChevronRowButton({ children, height, onPress }: Props) {
   return (
     <TouchableOpacity onPress={onPress} style={[styles.container, { height }]}>
-      <View style={styles.childrenContainer}>
-        {children}
-      </View>
+      <View style={styles.childrenContainer}>{children}</View>
       <View style={styles.chevronContainer}>
-        <Icon name={'chevron-right'} size={metrics.icons.small} color={colors.darkHint} />
+        <Icon
+          name={'chevron-right'}
+          size={metrics.icons.small}
+          color={colors.darkHint}
+        />
       </View>
     </TouchableOpacity>
   );

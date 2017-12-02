@@ -1,25 +1,24 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { View } from 'react-native';
 import styles from './styles/HorizontalDividerList.styles';
 
 type Props = {
-  children?: React$Element<any>,
+  children?: React.Node,
   dividerStyle?: any,
   hasBottomDivider?: boolean,
-}
+};
 
 export default function HorizontalDividerList(props: Props) {
-  const {
-    children,
-    dividerStyle,
-    hasBottomDivider,
-     } = props;
+  const { children, dividerStyle, hasBottomDivider } = props;
   return (
     <View>
       {React.Children.toArray(children).reduce((elements, child, i, array) => {
         elements.push(child);
-        if (i < (hasBottomDivider && array.length) || array.length - 1) {
+        if (
+          (hasBottomDivider && i < array.length) ||
+          (!hasBottomDivider && i < array.length - 1)
+        ) {
           elements.push(
             <View
               style={[styles.divider, dividerStyle]}

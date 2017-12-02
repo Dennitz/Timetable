@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     color: colors.darkSecondary,
   },
   dividerStyle: {
-    height: StyleSheet.hairlineWidth,
-    marginHorizontal: 8,
+    height: 1,
+    marginHorizontal: 16,
   },
 });
 

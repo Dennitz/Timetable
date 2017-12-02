@@ -29,15 +29,15 @@ type Props = {
   courseId?: string,
   dispatch: Function,
   navigator: NativeNavigator,
-}
+};
 
 export type CourseFormInput = {
   name: string,
   appointments: Array<AppointmentInput & {
-    id?: string,
-    course?: string,
-  }>,
-}
+      id?: string,
+      course?: string,
+    },>,
+};
 
 const DecoratedCourseForm: () => React$Element<any> = reduxForm({
   form: 'courseForm',
@@ -45,7 +45,7 @@ const DecoratedCourseForm: () => React$Element<any> = reduxForm({
 })(CourseForm);
 
 // exported for tests
-export class CourseFormScreen extends React.Component {
+export class CourseFormScreen extends React.Component<Props, {}> {
   static navigatorStyle = navBar;
   static navigatorButtons = {
     rightButtons: [
@@ -66,11 +66,13 @@ export class CourseFormScreen extends React.Component {
     if (courseId) {
       const course: Course = courses[courseId];
       if (course) {
-        const appointmentFieldValues = course.appointments.map(appointmentId => ({
-          ...appointments[appointmentId],
-          id: undefined,
-          course: undefined,
-        }));
+        const appointmentFieldValues = course.appointments.map(
+          appointmentId => ({
+            ...appointments[appointmentId],
+            id: undefined,
+            course: undefined,
+          }),
+        );
         return {
           name: course.name,
           appointments: appointmentFieldValues,
@@ -80,7 +82,7 @@ export class CourseFormScreen extends React.Component {
     return {};
   };
 
-  _handleNavigatorEvent = (event) => {
+  _handleNavigatorEvent = event => {
     const { dispatch, navigator } = this.props;
     if (event.type === 'NavBarButtonPress') {
       if (event.id === 'cancel') {
@@ -100,23 +102,28 @@ export class CourseFormScreen extends React.Component {
     let insertIndex;
     if (!appointmentFieldArray) {
       insertIndex = -1;
-    } else { // find index to sort by day, time and start/end date
-      const appointments = (index != null &&
-        appointmentFieldArray.filter((_, idx) => idx !== index)) ||
+    } else {
+      // find index to sort by day, time and start/end date
+      const appointments =
+        (index != null &&
+          appointmentFieldArray.filter((_, idx) => idx !== index)) ||
         appointmentFieldArray;
 
-      insertIndex = appointments.findIndex((a) => {
+      insertIndex = appointments.findIndex(a => {
         if (a.startdate.day() === input.startdate.day()) {
-          if (a.starttime.isSame(input.starttime, 'minutes')
-            && a.endtime.isSame(input.endtime, 'minutes')
+          if (
+            a.starttime.isSame(input.starttime, 'minutes') &&
+            a.endtime.isSame(input.endtime, 'minutes')
           ) {
             if (a.startdate.isSame(input.startdate, 'day')) {
               return a.enddate.isAfter(input.enddate, 'day');
             }
             return a.startdate.isAfter(input.startdate, 'day');
           }
-          return a.starttime.isAfter(input.starttime, 'minutes')
-            && a.endtime.isAfter(input.endtime, 'minutes');
+          return (
+            a.starttime.isAfter(input.starttime, 'minutes') &&
+            a.endtime.isAfter(input.endtime, 'minutes')
+          );
         }
         return a.startdate.day() > input.startdate.day();
       });
@@ -140,7 +147,12 @@ export class CourseFormScreen extends React.Component {
     const { courses, courseId, dispatch, navigator } = this.props;
 
     if (courseId) {
-      dispatch(appointmentActions.removeAppointments(courses[courseId].appointments, courseId));
+      dispatch(
+        appointmentActions.removeAppointments(
+          courses[courseId].appointments,
+          courseId,
+        ),
+      );
     }
 
     const _courseId = courseId || uuid();
@@ -169,7 +181,9 @@ export class CourseFormScreen extends React.Component {
   _handleRemoveCourse = () => {
     const { courses, courseId, dispatch, navigator } = this.props;
     if (!courseId) {
-      throw new Error('No courseId was passed in. Maybe the remove button should not be displayed');
+      throw new Error(
+        'No courseId was passed in. Maybe the remove button should not be displayed',
+      );
     }
     const course = courses[courseId];
     dispatch(courseActions.removeCourse(courseId, course.appointments));

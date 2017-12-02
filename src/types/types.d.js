@@ -3,36 +3,36 @@
 declare type AddAppointmentsAction = {
   type: 'ADD_APPOINTMENTS',
   appointments: AppointmentsState,
-}
+};
 
 declare type RemoveAppointmentsAction = {
   type: 'REMOVE_APPOINTMENTS',
   appointmentIds: Array<string>,
   courseId: string,
-}
+};
 
 declare type EditCourseAction = {
   type: 'EDIT_COURSE',
   course: Course,
-}
+};
 
 declare type RemoveCourseAction = {
   type: 'REMOVE_COURSE',
   courseId: string,
   appointmentIds: Array<string>,
-}
+};
 
 declare type Action =
-  AddAppointmentsAction
+  | AddAppointmentsAction
   | RemoveAppointmentsAction
   | EditCourseAction
-  | RemoveCourseAction
+  | RemoveCourseAction;
 
 declare type ApplicationState = {
   form: Object,
   appointments: AppointmentsState,
   courses: CoursesState,
-}
+};
 
 declare type AppointmentsState = { [id: string]: Appointment };
 
@@ -59,4 +59,4 @@ declare type Course = {
   appointments: Array<string>,
 };
 
-declare type Weekday = | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun';
+declare type Weekday = 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun';

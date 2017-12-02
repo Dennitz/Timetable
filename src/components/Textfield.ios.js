@@ -1,6 +1,12 @@
 // @flow
 import React from 'react';
-import { LayoutAnimation, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {
+  LayoutAnimation,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import defaultLayoutAnimation from '../lib/defaultLayoutAnimation';
 import styles from './styles/Textfield.styles.ios';
@@ -14,21 +20,21 @@ type Props = {
   onPress?: () => void,
   placeholderColor?: string,
   value?: string,
-}
+};
 
 /**
  * Text input component for ios which can also be used as a button
  * (useful in forms to achieve same look across input and other fields).
  * Shows error message passed in meta prop (made for use with redux-form)
  */
-export default class TextField extends React.Component {
+export default class TextField extends React.Component<Props, {}> {
   static defaultProps = {
     isButton: false,
     input: {
-      onChange: () => { },
+      onChange: () => {},
     },
     meta: {},
-    onPress: () => { },
+    onPress: () => {},
     value: '',
   };
 
@@ -36,14 +42,16 @@ export default class TextField extends React.Component {
   componentWillUpdate(nextProps: Props) {
     const meta = this.props.meta || {};
     const nextMeta = nextProps.meta || {};
-    const showsError = Boolean((meta.touched || meta.submitFailed) && meta.error);
-    const nextShowsError = Boolean((nextMeta.touched || nextMeta.submitFailed) && nextMeta.error);
+    const showsError = Boolean(
+      (meta.touched || meta.submitFailed) && meta.error,
+    );
+    const nextShowsError = Boolean(
+      (nextMeta.touched || nextMeta.submitFailed) && nextMeta.error,
+    );
     if (showsError !== nextShowsError) {
       LayoutAnimation.configureNext(defaultLayoutAnimation);
     }
   }
-
-  props: Props;
 
   render() {
     const {
@@ -65,7 +73,10 @@ export default class TextField extends React.Component {
           onPress={onPress}
         >
           {label && <Text style={styles.label}>{label}</Text>}
-          <View style={styles.fieldContainer} pointerEvents={isButton ? 'none' : 'auto'}>
+          <View
+            style={styles.fieldContainer}
+            pointerEvents={isButton ? 'none' : 'auto'}
+          >
             <TextInput
               style={(label && styles.textInputWithLabel) || styles.textInput}
               placeholderTextColor={placeholderColor || colors.darkHint}
@@ -80,7 +91,11 @@ export default class TextField extends React.Component {
           </View>
           {isButton && (
             <View style={styles.chevronContainer}>
-              <Icon name={'chevron-right'} size={metrics.icons.small} color={colors.darkHint} />
+              <Icon
+                name={'chevron-right'}
+                size={metrics.icons.small}
+                color={colors.darkHint}
+              />
             </View>
           )}
         </TouchableOpacity>
@@ -88,12 +103,14 @@ export default class TextField extends React.Component {
           style={[
             styles.horizontalLine,
             {
-              backgroundColor: ((touched || submitFailed) && error && colors.error)
-              || colors.darkDivider,
+              backgroundColor:
+                ((touched || submitFailed) && error && colors.error) ||
+                colors.darkDivider,
             },
           ]}
         />
-        {(touched || submitFailed) && error && <Text style={styles.error}>{error}</Text>}
+        {(touched || submitFailed) &&
+          error && <Text style={styles.error}>{error}</Text>}
       </View>
     );
   }

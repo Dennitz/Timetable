@@ -10,24 +10,24 @@ import moment from 'moment';
 import DatePickerCollapsible from './DatePickerCollapsible';
 import Textfield from './Textfield';
 import TimePickerCollapsible from './TimePickerCollapsible'; // uses platform specific code
-/* eslint-enable import/no-unresolved, import/extensions*/
+/* eslint-enable import/no-unresolved, import/extensions */
 import styles from './styles/AppointmentForm.styles';
 import type { Collapsible } from './CollapsibleField';
 
 type Props = {
-  onRecurrencePress: () => void,
-}
+  onRecurrencePress: (input: { value: any }) => void,
+};
 
 type FieldProps = {
   input: {
     onPress: () => void,
     value: any,
   },
-}
+};
 
 type FieldRef = {
   getRenderedComponent: () => Collapsible,
-}
+};
 
 function RecurrenceRow({ input, onRecurrencePress }: Props & FieldProps) {
   return (
@@ -41,7 +41,7 @@ function RecurrenceRow({ input, onRecurrencePress }: Props & FieldProps) {
   );
 }
 
-export default class AppointmentForm extends React.Component {
+export default class AppointmentForm extends React.Component<Props, {}> {
   _fieldRefs = {};
 
   _closeExpandedField = () => {
@@ -51,21 +51,22 @@ export default class AppointmentForm extends React.Component {
     this._lastExpandedField = null;
   };
 
-  _handleExpand = (fieldRef: FieldRef) => {
-    if (this._lastExpandedField !== fieldRef) {
-      this._closeExpandedField();
+  _handleExpand = (fieldRef: FieldRef | null) => {
+    if (fieldRef !== null) {
+      if (this._lastExpandedField !== fieldRef) {
+        this._closeExpandedField();
+      }
+      Keyboard.dismiss();
+      this._lastExpandedField = fieldRef;
     }
-    Keyboard.dismiss();
-    this._lastExpandedField = fieldRef;
   };
 
   _lastExpandedField: ?FieldRef;
   _fieldRefs: {
-    timeRef: FieldRef,
-    startdateRef: FieldRef,
-    enddateRef: FieldRef,
+    timeRef: FieldRef | null,
+    startdateRef: FieldRef | null,
+    enddateRef: FieldRef | null,
   };
-  props: Props;
 
   render() {
     const { onRecurrencePress } = this.props;
@@ -78,7 +79,9 @@ export default class AppointmentForm extends React.Component {
         <View style={styles.navBarSpacer} />
         <Fields
           withRef
-          ref={(field) => { this._fieldRefs.timeRef = field; }}
+          ref={field => {
+            this._fieldRefs.timeRef = field;
+          }}
           names={['starttime', 'endtime']}
           component={TimePickerCollapsible}
           label={i18n.t('time')}
@@ -89,7 +92,9 @@ export default class AppointmentForm extends React.Component {
         <View style={styles.spacer} />
         <Field
           withRef
-          ref={(field) => { this._fieldRefs.startdateRef = field; }}
+          ref={field => {
+            this._fieldRefs.startdateRef = field;
+          }}
           name={'startdate'}
           component={DatePickerCollapsible}
           label={i18n.t('starts')}
@@ -98,7 +103,9 @@ export default class AppointmentForm extends React.Component {
         <View style={styles.spacer} />
         <Field
           withRef
-          ref={(field) => { this._fieldRefs.enddateRef = field; }}
+          ref={field => {
+            this._fieldRefs.enddateRef = field;
+          }}
           name={'enddate'}
           component={DatePickerCollapsible}
           label={i18n.t('ends')}

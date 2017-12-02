@@ -8,7 +8,7 @@ type Props = {
   color: string,
   type: 'back' | 'forward',
   onPress: Function,
-}
+};
 
 export default function ArrowButton({ color, type, onPress }: Props) {
   const iconName = type === 'back' ? 'arrow-back' : 'arrow-forward';

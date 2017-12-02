@@ -55,12 +55,12 @@ declare type NativeNavigator = {
     to: 'hidden' | 'shown',
     animated?: boolean,
   }) => void,
-}
+};
 
 type NavigatorEvent = {
   type: 'NavBarButtonPress',
   id: string,
-}
+};
 
 type ButtonProps = {
   id: string,
@@ -73,9 +73,9 @@ type ButtonProps = {
   buttonColor?: string,
   buttonFontSize?: number,
   buttonFontWeight?: string,
-}
+};
 
 declare type NavigatorButtons = {
   leftButtons?: Array<ButtonProps>,
   rightButtons?: Array<ButtonProps>,
-}
+};

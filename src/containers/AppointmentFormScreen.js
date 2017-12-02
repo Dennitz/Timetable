@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, submit } from 'redux-form';
 import i18n from 'react-native-i18n';
@@ -14,26 +14,26 @@ import { navBar } from '../themes';
 export type AppointmentFormInput = AppointmentInput & {
   id?: string,
   course?: string,
-}
+};
 
 type OwnProps = {
   index?: number,
   initialValues?: Object,
-  onSubmit: (input: AppointmentFormInput) => void,
-}
+  onSubmit: (input: AppointmentFormInput, index: number | void) => void,
+};
 
 type Props = OwnProps & {
   dispatch: Function,
   navigator: NativeNavigator,
-}
+};
 
-const DecoratedAppointmentForm: () => React$Element<any> = reduxForm({
+const DecoratedAppointmentForm: () => React.Node = reduxForm({
   form: 'appointmentForm',
   validate,
 })(AppointmentForm);
 
 // exported for tests
-export class AppointmentFormScreen extends React.Component {
+export class AppointmentFormScreen extends React.Component<Props, {}> {
   static navigatorStyle = navBar;
   static navigatorButtons = {
     rightButtons: [
@@ -49,7 +49,7 @@ export class AppointmentFormScreen extends React.Component {
     this.props.navigator.setOnNavigatorEvent(this._handleNavigatorEvent);
   }
 
-  _handleNavigatorEvent = (event) => {
+  _handleNavigatorEvent = event => {
     const { dispatch } = this.props;
     if (event.type === 'NavBarButtonPress') {
       if (event.id === 'save') {
@@ -70,8 +70,6 @@ export class AppointmentFormScreen extends React.Component {
     };
   };
 
-  props: Props;
-
   render() {
     const { index, initialValues, navigator, onSubmit } = this.props;
     return (
@@ -81,19 +79,22 @@ export class AppointmentFormScreen extends React.Component {
           ...this._getInitialValues(moment()),
           ...initialValues,
         }}
-        onRecurrencePress={input => navigator.push({
-          screen: RECURRENCE_PICKER,
-          title: i18n.t('repeat'),
-          passProps: {
-            input,
-          },
-        })}
+        onRecurrencePress={input =>
+          navigator.push({
+            screen: RECURRENCE_PICKER,
+            title: i18n.t('repeat'),
+            passProps: {
+              input,
+            },
+          })
+        }
       />
     );
   }
 }
 
-const ConnectedAppointmentFormScreen: (props: OwnProps) => React$Element<any>
-  = connect()(AppointmentFormScreen);
+const ConnectedAppointmentFormScreen: (
+  props: OwnProps,
+) => React$Element<any> = connect()(AppointmentFormScreen);
 
 export default ConnectedAppointmentFormScreen;

@@ -10,7 +10,7 @@ type Props = {
   onPress: (id: string) => void,
   onRemovePress: (id: string, appointmentIds: Array<string>) => void,
   showRemoveButtons: boolean,
-}
+};
 
 export default function EditSelection(props: Props) {
   const { courses, onPress, onRemovePress, showRemoveButtons } = props;

@@ -5,7 +5,6 @@ import { reducer as form } from 'redux-form';
 import courses from './courses';
 import appointments from './appointments';
 
-
 const rootReducer = combineReducers({
   form,
   appointments,
@@ -13,4 +12,3 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
-

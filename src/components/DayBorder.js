@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { Text, View } from 'react-native';
 import ElevatedView from 'react-native-elevated-view';
 
@@ -8,8 +8,8 @@ import styles from './styles/DayBorder.styles';
 
 type Props = {
   date: string,
-  children?: React.Element<any>,
-}
+  children?: React.Node,
+};
 
 export default function DayBorder({ date, children }: Props) {
   return (

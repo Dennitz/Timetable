@@ -9,25 +9,22 @@ type Props = {
   endtime: moment$Moment,
   location?: string,
   type?: string,
-}
+};
 
 export default function CourseAppointment(props: Props) {
   const { starttime, endtime, name, location, type } = props;
   const start = starttime.format('H:mm');
   const end = endtime.format('H:mm');
-  const secondaryInfo = (location || type) &&
+  const secondaryInfo =
+    (location || type) &&
     `${location || ''}${(location && type && ', ') || ''}${type || ''}`;
   return (
     <View style={styles.container}>
       <View style={styles.infoSpacer}>
         <View style={styles.timeContainer}>
-          <Text style={[styles.time, styles.secondaryText]}>
-            {start}
-          </Text>
+          <Text style={[styles.time, styles.secondaryText]}>{start}</Text>
           <View style={styles.dash} />
-          <Text style={[styles.time, styles.secondaryText]}>
-            {end}
-          </Text>
+          <Text style={[styles.time, styles.secondaryText]}>{end}</Text>
         </View>
       </View>
       <View style={styles.infoContainer}>
