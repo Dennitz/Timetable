@@ -3,7 +3,24 @@
 A simple and clean timetable app for iOS.  
 Written completely in JavaScript using React Native.
 
-<img src="/assets/main-screen.png?raw=true" width="240" alt="screenshot">
+
+<div>
+ 	<img 
+ 		src="https://user-images.githubusercontent.com/18401729/33516891-6925469a-d77a-11e7-966b-44300c9e5508.png" 
+ 		width="200" 
+ 		alt="screenshot"
+ 	>
+ 	<img 
+ 		src="https://user-images.githubusercontent.com/18401729/33516893-6963dd6a-d77a-11e7-81a5-fe5ec90b6440.gif" 
+ 		width="200" 
+ 		alt"screen-recording-add"
+ 	>
+ 	<img 
+ 		src="https://user-images.githubusercontent.com/18401729/33516892-6944dba4-d77a-11e7-924f-b2626983d357.gif" 
+ 		width="200" 
+ 		alt"screen-recording-main"
+ 	>
+</div>
 
 [<img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" width="135" height="40" alt="Download on the App Store">](https://itunes.apple.com/us/app/clean-timetable/id1242105557?mt=8)
 
@@ -22,11 +39,6 @@ Written completely in JavaScript using React Native.
 Translations are provided in `/src/i18n`.  
 In case a translation is not given for some language, english is taken as a fallback.  
 To add translations, `english.json` should be taken as reference. 
-
-## Todo
-
-* Fix unit tests (waiting for Enzyme and react-native-mock to support React 16)
-* Add documentation
 
 ## License
 
