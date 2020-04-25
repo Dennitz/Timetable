@@ -1,1 +1,32 @@
-{}
+{
+  "appointment": "अपॉइंटमेंट",
+  "add-appointment": "अपॉइंटमेंट जोड़ें",
+  "BIWEEKLY": "हर 2 सप्ताह",
+  "cancel": "रद्द करें",
+  "course": "कोर्स",
+  "courses": "पाठ्यक्रम",
+  "day": "दिन",
+  "delete": "हटाएं",
+  "done": "समाप्त",
+  "edit": "संपादित करें",
+  "ends": "समाप्त होता है",
+  "enddate-greater-than-startdate": "अंतिम तिथि पहले के बाद होनी चाहिए",
+  "endtime-greater-than-starttime": "प्रारंभ समय समाप्ति समय से पहले होना चाहिए",
+  "every": "हर",
+  "every-2nd": "हर 2.",
+  "location": "स्थान",
+  "month-day-format": "MMM D", // moment.js format used in navbar
+  "one-appointment-required": "कम से कम एक अपॉइंटमेंट अवश्य जोड़ें",
+  "recurrence": "पुनरावृत्ति",
+  "remove-course": "कोर्स  हटाएं",
+  "remove-course-alert": "यह अपनी सभी अपॉइंटमेंट के साथ पाठ्यक्रम को हटा देगा",
+  "repeat": "दोहराएं",
+  "save": "Save",
+  "starts": "प्रारंभ",
+  "time": "समय",
+  "title": "शीर्षक",
+  "title-is-required": "शीर्षक आवश्यक है",
+  "type": "टाइप (जैसे व्याख्यान, ट्यूटोरियल)",
+  "until": "तक",
+  "WEEKLY": "हर हफ्ते"
+}
