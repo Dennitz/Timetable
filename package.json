@@ -8,7 +8,7 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "dependencies": {
-    "moment": "^2.18.1",
+    "moment": "^2.29.2",
     "moment-range": "^3.0.3",
     "ramda": "^0.24.1",
     "react": "^16.0.0",
